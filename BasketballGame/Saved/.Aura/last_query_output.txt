@@ -1,0 +1,85 @@
+Top file paths:
+D:/ClimbingGame/BasketballGame/Content/Input/Actions/IA_Look.uasset
+D:/ClimbingGame/BasketballGame/Content/Input/Actions/IA_Move.uasset
+
+
+
+File: Content_Input_Actions_IA_Look_uasset
+Relevance Score: 1.5546
+
+
+
+asset_path: /Game/Input/Actions/IA_Look.IA_Look
+
+referencers:
+  [
+  "/Game/Variant_Combat/Input/IMC_Combat",
+  "/Game/Variant_Combat/Input/IMC_Combat",
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
+  "/Game/Variant_Platforming/Input/IMC_Platforming",
+  "/Game/Variant_Platforming/Input/IMC_Platforming",
+  "/Game/Variant_Platforming/Blueprints/BP_PlatformingCharacter",
+  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
+  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
+  "/Game/Input/IMC_Default",
+  "/Game/Input/IMC_Default"
+]
+
+dependencies:
+  [
+  "/Script/Engine",
+  "/Script/EnhancedInput",
+  "/Script/EnhancedInput"
+]
+
+content: asset path:
+/Game/Input/Actions/IA_Look.IA_Look
+
+
+
+
+
+
+
+
+File: Content_Input_Actions_IA_Move_uasset
+Relevance Score: 1.5473
+
+
+
+asset_path: /Game/Input/Actions/IA_Move.IA_Move
+
+referencers:
+  [
+  "/Game/Variant_Combat/Input/IMC_Combat",
+  "/Game/Variant_Combat/Input/IMC_Combat",
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
+  "/Game/Variant_SideScrolling/Input/IMC_SideScroller",
+  "/Game/Variant_SideScrolling/Input/IMC_SideScroller",
+  "/Game/Variant_SideScrolling/Blueprints/BP_SideScrollingCharacter",
+  "/Game/Variant_SideScrolling/Blueprints/BP_SideScrollingCharacter",
+  "/Game/Variant_Platforming/Input/IMC_Platforming",
+  "/Game/Variant_Platforming/Input/IMC_Platforming",
+  "/Game/Variant_Platforming/Blueprints/BP_PlatformingCharacter",
+  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
+  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
+  "/Game/Input/IMC_Default",
+  "/Game/Input/IMC_Default"
+]
+
+dependencies:
+  [
+  "/Script/Engine",
+  "/Script/EnhancedInput",
+  "/Script/EnhancedInput"
+]
+
+content: asset path:
+/Game/Input/Actions/IA_Move.IA_Move
+
+
+
+
+

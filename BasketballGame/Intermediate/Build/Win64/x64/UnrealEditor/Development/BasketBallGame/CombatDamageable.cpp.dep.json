@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\interfaces\\combatdamageable.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\basketballgameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\basketballgame\\definitions.basketballgame.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\interfaces\\combatdamageable.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatdamageable.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

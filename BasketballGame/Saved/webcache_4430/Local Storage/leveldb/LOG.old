@@ -1,0 +1,18 @@
+2026/02/09-04:39:01.956 6200 Reusing MANIFEST D:/ClimbingGame/BasketballGame/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2026/02/09-04:39:01.986 6200 Recovering log #104
+2026/02/09-04:39:01.987 6200 Reusing old log D:/ClimbingGame/BasketballGame/Saved/webcache_4430\Local Storage\leveldb/000104.log 
+2026/02/09-04:41:05.317 8374 Level-0 table #108: started
+2026/02/09-04:41:05.326 8374 Level-0 table #108: 25452 bytes OK
+2026/02/09-04:41:05.330 8374 Delete type=0 #104
+2026/02/09-04:43:24.698 67f0 Level-0 table #110: started
+2026/02/09-04:43:24.706 67f0 Level-0 table #110: 21792 bytes OK
+2026/02/09-04:43:24.709 67f0 Delete type=0 #107
+2026/02/09-04:43:24.711 67f0 Compacting 4@0 + 1@1 files
+2026/02/09-04:43:24.716 67f0 Generated table #111@0: 24 keys, 18024 bytes
+2026/02/09-04:43:24.717 67f0 Compacted 4@0 + 1@1 files => 18024 bytes
+2026/02/09-04:43:24.718 67f0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/02/09-04:43:24.719 67f0 Delete type=2 #99
+2026/02/09-04:43:24.719 67f0 Delete type=2 #102
+2026/02/09-04:43:24.719 67f0 Delete type=2 #105
+2026/02/09-04:43:24.719 67f0 Delete type=2 #108
+2026/02/09-04:43:24.719 67f0 Delete type=2 #110

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\ClimbingGame\\BasketballGame\\Source\\BasketBallGame\\BasketBallGame.Build.cs",
+		"D:\\ClimbingGame\\BasketballGame\\Source\\BasketBallGame.Target.cs",
+		"D:\\ClimbingGame\\BasketballGame\\Source\\BasketBallGameEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

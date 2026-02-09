@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\gameplay\\combatcheckpointvolume.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\basketballgameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\basketballgame\\definitions.basketballgame.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\gameplay\\combatcheckpointvolume.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatcheckpointvolume.generated.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\combatcharacter.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\interfaces\\combatattacker.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatattacker.generated.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\interfaces\\combatdamageable.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatdamageable.generated.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatcharacter.generated.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\variant_combat\\combatplayercontroller.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\climbinggame\\basketballgame\\source\\basketballgame\\basketballgamegamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\basketballgameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\basketballgame\\definitions.basketballgame.h",
+            "d:\\climbinggame\\basketballgame\\source\\basketballgame\\basketballgamegamemode.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\climbinggame\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\basketballgamegamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
