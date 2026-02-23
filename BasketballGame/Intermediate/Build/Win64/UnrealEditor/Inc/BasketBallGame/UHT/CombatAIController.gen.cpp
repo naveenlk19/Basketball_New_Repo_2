@@ -125,14 +125,14 @@ ACombatAIController::~ACombatAIController() {}
 // ********** End Class ACombatAIController ********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACombatAIController, ACombatAIController::StaticClass, TEXT("ACombatAIController"), &Z_Registration_Info_UClass_ACombatAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACombatAIController), 1642507413U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_2121141534(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_2121141534(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatAIController_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

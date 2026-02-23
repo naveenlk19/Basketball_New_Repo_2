@@ -11,6 +11,7 @@
 class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
+class UUserWidget;
 class UBallHandlerComponent;
 struct FInputActionValue;
 
@@ -58,6 +59,19 @@ protected:
 	/** Pickup Ball Input Action */
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* PickupBallAction;
+
+	// ======== HUD Widget System ========
+
+	/** Score HUD widget class to auto-create on BeginPlay */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
+	TSubclassOf<UUserWidget> ScoreHUDClass;
+
+	/** Created Score HUD widget instance */
+	UPROPERTY(BlueprintReadOnly, Category = "UI")
+	UUserWidget* ScoreHUDWidget;
+
+	/** BeginPlay override for widget creation */
+	virtual void BeginPlay() override;
 
 public:
 

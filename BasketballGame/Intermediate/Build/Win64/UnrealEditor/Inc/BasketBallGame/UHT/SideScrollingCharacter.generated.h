@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ASideScrollingCharacter **************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHasWallJumped); \
 	DECLARE_FUNCTION(execHasDoubleJumped); \
 	DECLARE_FUNCTION(execDoInteract); \
@@ -29,7 +29,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ASideScrollingCharacter_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASideScrollingCharacter(); \
 	friend struct Z_Construct_UClass_ASideScrollingCharacter_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(ASideScrollingCharacter)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ASideScrollingCharacter(ASideScrollingCharacter&&) = delete; \
 	ASideScrollingCharacter(const ASideScrollingCharacter&) = delete; \
@@ -50,13 +50,13 @@ public: \
 	NO_API virtual ~ASideScrollingCharacter();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_16_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_16_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -66,6 +66,6 @@ class ASideScrollingCharacter;
 // ********** End Class ASideScrollingCharacter ****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_SideScrollingCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

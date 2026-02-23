@@ -12,8 +12,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBasketball() {}
 
 // ********** Begin Cross Module References ********************************************************
-BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketball();
-BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketball_NoRegister();
+BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBall();
+BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBall_NoRegister();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
@@ -21,10 +22,10 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_BasketBallGame();
 // ********** End Cross Module References **********************************************************
 
-// ********** Begin Class ABasketball Function AttachToCharacter ***********************************
-struct Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics
+// ********** Begin Class ABasketBall Function AttachToCharacter ***********************************
+struct Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics
 {
-	struct Basketball_eventAttachToCharacter_Parms
+	struct BasketBall_eventAttachToCharacter_Parms
 	{
 		AActor* Character;
 		FName SocketName;
@@ -46,25 +47,25 @@ struct Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::NewProp_Character = { "Character", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Basketball_eventAttachToCharacter_Parms, Character), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::NewProp_SocketName = { "SocketName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Basketball_eventAttachToCharacter_Parms, SocketName), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::NewProp_Character,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::NewProp_SocketName,
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::NewProp_Character = { "Character", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BasketBall_eventAttachToCharacter_Parms, Character), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::NewProp_SocketName = { "SocketName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BasketBall_eventAttachToCharacter_Parms, SocketName), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::NewProp_Character,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::NewProp_SocketName,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketball, nullptr, "AttachToCharacter", Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::Basketball_eventAttachToCharacter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::Basketball_eventAttachToCharacter_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ABasketball_AttachToCharacter()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketBall, nullptr, "AttachToCharacter", Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::BasketBall_eventAttachToCharacter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::BasketBall_eventAttachToCharacter_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABasketBall_AttachToCharacter()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketball_AttachToCharacter_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketBall_AttachToCharacter_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ABasketball::execAttachToCharacter)
+DEFINE_FUNCTION(ABasketBall::execAttachToCharacter)
 {
 	P_GET_OBJECT(AActor,Z_Param_Character);
 	P_GET_PROPERTY(FNameProperty,Z_Param_SocketName);
@@ -73,12 +74,12 @@ DEFINE_FUNCTION(ABasketball::execAttachToCharacter)
 	P_THIS->AttachToCharacter(Z_Param_Character,Z_Param_SocketName);
 	P_NATIVE_END;
 }
-// ********** End Class ABasketball Function AttachToCharacter *************************************
+// ********** End Class ABasketBall Function AttachToCharacter *************************************
 
-// ********** Begin Class ABasketball Function CanBePickedUp ***************************************
-struct Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics
+// ********** Begin Class ABasketBall Function CanBePickedUp ***************************************
+struct Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics
 {
-	struct Basketball_eventCanBePickedUp_Parms
+	struct BasketBall_eventCanBePickedUp_Parms
 	{
 		bool ReturnValue;
 	};
@@ -99,37 +100,37 @@ struct Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-void Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+void Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
-	((Basketball_eventCanBePickedUp_Parms*)Obj)->ReturnValue = 1;
+	((BasketBall_eventCanBePickedUp_Parms*)Obj)->ReturnValue = 1;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Basketball_eventCanBePickedUp_Parms), &Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(BasketBall_eventCanBePickedUp_Parms), &Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketball, nullptr, "CanBePickedUp", Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::Basketball_eventCanBePickedUp_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::Basketball_eventCanBePickedUp_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ABasketball_CanBePickedUp()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketBall, nullptr, "CanBePickedUp", Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::BasketBall_eventCanBePickedUp_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::BasketBall_eventCanBePickedUp_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABasketBall_CanBePickedUp()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketball_CanBePickedUp_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketBall_CanBePickedUp_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ABasketball::execCanBePickedUp)
+DEFINE_FUNCTION(ABasketBall::execCanBePickedUp)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->CanBePickedUp();
 	P_NATIVE_END;
 }
-// ********** End Class ABasketball Function CanBePickedUp *****************************************
+// ********** End Class ABasketBall Function CanBePickedUp *****************************************
 
-// ********** Begin Class ABasketball Function DetachFromCharacter *********************************
-struct Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics
+// ********** Begin Class ABasketBall Function DetachFromCharacter *********************************
+struct Z_Construct_UFunction_ABasketBall_DetachFromCharacter_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -145,27 +146,27 @@ struct Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketball, nullptr, "DetachFromCharacter", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_ABasketball_DetachFromCharacter()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketBall_DetachFromCharacter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketBall, nullptr, "DetachFromCharacter", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_DetachFromCharacter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketBall_DetachFromCharacter_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ABasketBall_DetachFromCharacter()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketball_DetachFromCharacter_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketBall_DetachFromCharacter_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ABasketball::execDetachFromCharacter)
+DEFINE_FUNCTION(ABasketBall::execDetachFromCharacter)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->DetachFromCharacter();
 	P_NATIVE_END;
 }
-// ********** End Class ABasketball Function DetachFromCharacter ***********************************
+// ********** End Class ABasketBall Function DetachFromCharacter ***********************************
 
-// ********** Begin Class ABasketball Function DisablePhysics **************************************
-struct Z_Construct_UFunction_ABasketball_DisablePhysics_Statics
+// ********** Begin Class ABasketBall Function DisablePhysics **************************************
+struct Z_Construct_UFunction_ABasketBall_DisablePhysics_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -181,27 +182,27 @@ struct Z_Construct_UFunction_ABasketball_DisablePhysics_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketball_DisablePhysics_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketball, nullptr, "DisablePhysics", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_DisablePhysics_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketball_DisablePhysics_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_ABasketball_DisablePhysics()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketBall_DisablePhysics_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketBall, nullptr, "DisablePhysics", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_DisablePhysics_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketBall_DisablePhysics_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ABasketBall_DisablePhysics()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketball_DisablePhysics_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketBall_DisablePhysics_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ABasketball::execDisablePhysics)
+DEFINE_FUNCTION(ABasketBall::execDisablePhysics)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->DisablePhysics();
 	P_NATIVE_END;
 }
-// ********** End Class ABasketball Function DisablePhysics ****************************************
+// ********** End Class ABasketBall Function DisablePhysics ****************************************
 
-// ********** Begin Class ABasketball Function EnablePhysics ***************************************
-struct Z_Construct_UFunction_ABasketball_EnablePhysics_Statics
+// ********** Begin Class ABasketBall Function EnablePhysics ***************************************
+struct Z_Construct_UFunction_ABasketBall_EnablePhysics_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -217,49 +218,49 @@ struct Z_Construct_UFunction_ABasketball_EnablePhysics_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketball_EnablePhysics_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketball, nullptr, "EnablePhysics", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketball_EnablePhysics_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketball_EnablePhysics_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_ABasketball_EnablePhysics()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasketBall_EnablePhysics_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABasketBall, nullptr, "EnablePhysics", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasketBall_EnablePhysics_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasketBall_EnablePhysics_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ABasketBall_EnablePhysics()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketball_EnablePhysics_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasketBall_EnablePhysics_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ABasketball::execEnablePhysics)
+DEFINE_FUNCTION(ABasketBall::execEnablePhysics)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->EnablePhysics();
 	P_NATIVE_END;
 }
-// ********** End Class ABasketball Function EnablePhysics *****************************************
+// ********** End Class ABasketBall Function EnablePhysics *****************************************
 
-// ********** Begin Class ABasketball **************************************************************
-void ABasketball::StaticRegisterNativesABasketball()
+// ********** Begin Class ABasketBall **************************************************************
+void ABasketBall::StaticRegisterNativesABasketBall()
 {
-	UClass* Class = ABasketball::StaticClass();
+	UClass* Class = ABasketBall::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "AttachToCharacter", &ABasketball::execAttachToCharacter },
-		{ "CanBePickedUp", &ABasketball::execCanBePickedUp },
-		{ "DetachFromCharacter", &ABasketball::execDetachFromCharacter },
-		{ "DisablePhysics", &ABasketball::execDisablePhysics },
-		{ "EnablePhysics", &ABasketball::execEnablePhysics },
+		{ "AttachToCharacter", &ABasketBall::execAttachToCharacter },
+		{ "CanBePickedUp", &ABasketBall::execCanBePickedUp },
+		{ "DetachFromCharacter", &ABasketBall::execDetachFromCharacter },
+		{ "DisablePhysics", &ABasketBall::execDisablePhysics },
+		{ "EnablePhysics", &ABasketBall::execEnablePhysics },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-FClassRegistrationInfo Z_Registration_Info_UClass_ABasketball;
-UClass* ABasketball::GetPrivateStaticClass()
+FClassRegistrationInfo Z_Registration_Info_UClass_ABasketBall;
+UClass* ABasketBall::GetPrivateStaticClass()
 {
-	using TClass = ABasketball;
-	if (!Z_Registration_Info_UClass_ABasketball.InnerSingleton)
+	using TClass = ABasketBall;
+	if (!Z_Registration_Info_UClass_ABasketBall.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
 			StaticPackage(),
-			TEXT("Basketball"),
-			Z_Registration_Info_UClass_ABasketball.InnerSingleton,
-			StaticRegisterNativesABasketball,
+			TEXT("BasketBall"),
+			Z_Registration_Info_UClass_ABasketBall.InnerSingleton,
+			StaticRegisterNativesABasketBall,
 			sizeof(TClass),
 			alignof(TClass),
 			TClass::StaticClassFlags,
@@ -272,13 +273,13 @@ UClass* ABasketball::GetPrivateStaticClass()
 			&TClass::WithinClass::StaticClass
 		);
 	}
-	return Z_Registration_Info_UClass_ABasketball.InnerSingleton;
+	return Z_Registration_Info_UClass_ABasketBall.InnerSingleton;
 }
-UClass* Z_Construct_UClass_ABasketball_NoRegister()
+UClass* Z_Construct_UClass_ABasketBall_NoRegister()
 {
-	return ABasketball::GetPrivateStaticClass();
+	return ABasketBall::GetPrivateStaticClass();
 }
-struct Z_Construct_UClass_ABasketball_Statics
+struct Z_Construct_UClass_ABasketBall_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -317,6 +318,36 @@ struct Z_Construct_UClass_ABasketball_Statics
 		{ "ToolTip", "Is the ball currently held by a player?" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bWasShot_MetaData[] = {
+		{ "Category", "Ball State" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Was this ball shot (launched by player)? */" },
+#endif
+		{ "ModuleRelativePath", "Basketball.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Was this ball shot (launched by player)?" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bHasScoredThisShot_MetaData[] = {
+		{ "Category", "Ball State" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Has this ball already scored on current shot attempt? */" },
+#endif
+		{ "ModuleRelativePath", "Basketball.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Has this ball already scored on current shot attempt?" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShotStartLocation_MetaData[] = {
+		{ "Category", "Ball State" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Location where shot was initiated from */" },
+#endif
+		{ "ModuleRelativePath", "Basketball.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Location where shot was initiated from" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallOwner_MetaData[] = {
 		{ "Category", "Ball State" },
 #if !UE_BUILD_SHIPPING
@@ -332,78 +363,97 @@ struct Z_Construct_UClass_ABasketball_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupRadius;
 	static void NewProp_bIsHeld_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsHeld;
+	static void NewProp_bWasShot_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bWasShot;
+	static void NewProp_bHasScoredThisShot_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bHasScoredThisShot;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ShotStartLocation;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BallOwner;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABasketball_AttachToCharacter, "AttachToCharacter" }, // 1169316104
-		{ &Z_Construct_UFunction_ABasketball_CanBePickedUp, "CanBePickedUp" }, // 1376737071
-		{ &Z_Construct_UFunction_ABasketball_DetachFromCharacter, "DetachFromCharacter" }, // 4223955572
-		{ &Z_Construct_UFunction_ABasketball_DisablePhysics, "DisablePhysics" }, // 599334313
-		{ &Z_Construct_UFunction_ABasketball_EnablePhysics, "EnablePhysics" }, // 3260372695
+		{ &Z_Construct_UFunction_ABasketBall_AttachToCharacter, "AttachToCharacter" }, // 1153788541
+		{ &Z_Construct_UFunction_ABasketBall_CanBePickedUp, "CanBePickedUp" }, // 496212068
+		{ &Z_Construct_UFunction_ABasketBall_DetachFromCharacter, "DetachFromCharacter" }, // 1923654032
+		{ &Z_Construct_UFunction_ABasketBall_DisablePhysics, "DisablePhysics" }, // 948408841
+		{ &Z_Construct_UFunction_ABasketBall_EnablePhysics, "EnablePhysics" }, // 2950762586
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<ABasketball>::IsAbstract,
+		TCppClassTypeTraits<ABasketBall>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketball_Statics::NewProp_BallMesh = { "BallMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketball, BallMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallMesh_MetaData), NewProp_BallMesh_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketball_Statics::NewProp_PickupRadius = { "PickupRadius", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketball, PickupRadius), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupRadius_MetaData), NewProp_PickupRadius_MetaData) };
-void Z_Construct_UClass_ABasketball_Statics::NewProp_bIsHeld_SetBit(void* Obj)
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_BallMesh = { "BallMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBall, BallMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallMesh_MetaData), NewProp_BallMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_PickupRadius = { "PickupRadius", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBall, PickupRadius), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupRadius_MetaData), NewProp_PickupRadius_MetaData) };
+void Z_Construct_UClass_ABasketBall_Statics::NewProp_bIsHeld_SetBit(void* Obj)
 {
-	((ABasketball*)Obj)->bIsHeld = 1;
+	((ABasketBall*)Obj)->bIsHeld = 1;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABasketball_Statics::NewProp_bIsHeld = { "bIsHeld", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABasketball), &Z_Construct_UClass_ABasketball_Statics::NewProp_bIsHeld_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsHeld_MetaData), NewProp_bIsHeld_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketball_Statics::NewProp_BallOwner = { "BallOwner", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketball, BallOwner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallOwner_MetaData), NewProp_BallOwner_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasketball_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketball_Statics::NewProp_BallMesh,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketball_Statics::NewProp_PickupRadius,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketball_Statics::NewProp_bIsHeld,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketball_Statics::NewProp_BallOwner,
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_bIsHeld = { "bIsHeld", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABasketBall), &Z_Construct_UClass_ABasketBall_Statics::NewProp_bIsHeld_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsHeld_MetaData), NewProp_bIsHeld_MetaData) };
+void Z_Construct_UClass_ABasketBall_Statics::NewProp_bWasShot_SetBit(void* Obj)
+{
+	((ABasketBall*)Obj)->bWasShot = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_bWasShot = { "bWasShot", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABasketBall), &Z_Construct_UClass_ABasketBall_Statics::NewProp_bWasShot_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bWasShot_MetaData), NewProp_bWasShot_MetaData) };
+void Z_Construct_UClass_ABasketBall_Statics::NewProp_bHasScoredThisShot_SetBit(void* Obj)
+{
+	((ABasketBall*)Obj)->bHasScoredThisShot = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_bHasScoredThisShot = { "bHasScoredThisShot", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABasketBall), &Z_Construct_UClass_ABasketBall_Statics::NewProp_bHasScoredThisShot_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bHasScoredThisShot_MetaData), NewProp_bHasScoredThisShot_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_ShotStartLocation = { "ShotStartLocation", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBall, ShotStartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShotStartLocation_MetaData), NewProp_ShotStartLocation_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBall_Statics::NewProp_BallOwner = { "BallOwner", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBall, BallOwner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallOwner_MetaData), NewProp_BallOwner_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasketBall_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_BallMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_PickupRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_bIsHeld,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_bWasShot,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_bHasScoredThisShot,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_ShotStartLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBall_Statics::NewProp_BallOwner,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketball_Statics::PropPointers) < 2048);
-UObject* (*const Z_Construct_UClass_ABasketball_Statics::DependentSingletons[])() = {
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketBall_Statics::PropPointers) < 2048);
+UObject* (*const Z_Construct_UClass_ABasketBall_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_BasketBallGame,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketball_Statics::DependentSingletons) < 16);
-const UECodeGen_Private::FClassParams Z_Construct_UClass_ABasketball_Statics::ClassParams = {
-	&ABasketball::StaticClass,
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketBall_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FClassParams Z_Construct_UClass_ABasketBall_Statics::ClassParams = {
+	&ABasketBall::StaticClass,
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	Z_Construct_UClass_ABasketball_Statics::PropPointers,
+	Z_Construct_UClass_ABasketBall_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	UE_ARRAY_COUNT(Z_Construct_UClass_ABasketball_Statics::PropPointers),
+	UE_ARRAY_COUNT(Z_Construct_UClass_ABasketBall_Statics::PropPointers),
 	0,
 	0x009001A4u,
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketball_Statics::Class_MetaDataParams), Z_Construct_UClass_ABasketball_Statics::Class_MetaDataParams)
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketBall_Statics::Class_MetaDataParams), Z_Construct_UClass_ABasketBall_Statics::Class_MetaDataParams)
 };
-UClass* Z_Construct_UClass_ABasketball()
+UClass* Z_Construct_UClass_ABasketBall()
 {
-	if (!Z_Registration_Info_UClass_ABasketball.OuterSingleton)
+	if (!Z_Registration_Info_UClass_ABasketBall.OuterSingleton)
 	{
-		UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_ABasketball.OuterSingleton, Z_Construct_UClass_ABasketball_Statics::ClassParams);
+		UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_ABasketBall.OuterSingleton, Z_Construct_UClass_ABasketBall_Statics::ClassParams);
 	}
-	return Z_Registration_Info_UClass_ABasketball.OuterSingleton;
+	return Z_Registration_Info_UClass_ABasketBall.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(ABasketball);
-ABasketball::~ABasketball() {}
-// ********** End Class ABasketball ****************************************************************
+DEFINE_VTABLE_PTR_HELPER_CTOR(ABasketBall);
+ABasketBall::~ABasketBall() {}
+// ********** End Class ABasketBall ****************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABasketball, ABasketball::StaticClass, TEXT("ABasketball"), &Z_Registration_Info_UClass_ABasketball, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasketball), 3036782442U) },
+		{ Z_Construct_UClass_ABasketBall, ABasketBall::StaticClass, TEXT("ABasketBall"), &Z_Registration_Info_UClass_ABasketBall, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasketBall), 1124464505U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_1670673645(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_3969192545(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Basketball_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

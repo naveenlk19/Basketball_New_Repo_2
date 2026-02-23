@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ABasketBallGameCharacter *************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
 	DECLARE_FUNCTION(execDoLook); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBallGameCharacter_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABasketBallGameCharacter(); \
 	friend struct Z_Construct_UClass_ABasketBallGameCharacter_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(ABasketBallGameCharacter)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABasketBallGameCharacter(ABasketBallGameCharacter&&) = delete; \
 	ABasketBallGameCharacter(const ABasketBallGameCharacter&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~ABasketBallGameCharacter();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_23_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_24_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_26_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class ABasketBallGameCharacter;
 // ********** End Class ABasketBallGameCharacter ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

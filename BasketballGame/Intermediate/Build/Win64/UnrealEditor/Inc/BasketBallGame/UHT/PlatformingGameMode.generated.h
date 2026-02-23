@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class APlatformingGameMode *****************************************************
 BASKETBALLGAME_API UClass* Z_Construct_UClass_APlatformingGameMode_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlatformingGameMode(); \
 	friend struct Z_Construct_UClass_APlatformingGameMode_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(APlatformingGameMode)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	APlatformingGameMode(APlatformingGameMode&&) = delete; \
 	APlatformingGameMode(const APlatformingGameMode&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~APlatformingGameMode();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_12_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_12_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class APlatformingGameMode;
 // ********** End Class APlatformingGameMode *******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_PlatformingGameMode_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

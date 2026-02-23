@@ -1,44 +1,64 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "InputActionValue.h"
 #include "BasketBallGamePlayerController.generated.h"
 
 class UInputMappingContext;
+class UInputAction;
 class UUserWidget;
+class UBasketballHUDWidget;
 
-/**
- *  Basic PlayerController class for a third person game
- *  Manages input mappings
- */
-UCLASS(abstract)
-class ABasketBallGamePlayerController : public APlayerController
+UCLASS()
+class BASKETBALLGAME_API ABasketBallGamePlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+public:
+	virtual void BeginPlay() override;
+	virtual void SetupInputComponent() override;
 	
+	// ================= HUD BRIDGE =================
+	
+	/** Refresh HUD with latest gameplay snapshot (called by GameMode after scoring events) */
+	UFUNCTION()
+	void RefreshHUD();
+
 protected:
 
-	/** Input Mapping Contexts */
-	UPROPERTY(EditAnywhere, Category ="Input|Input Mappings")
-	TArray<UInputMappingContext*> DefaultMappingContexts;
+	// ================= UI =================
 
-	/** Input Mapping Contexts */
-	UPROPERTY(EditAnywhere, Category="Input|Input Mappings")
-	TArray<UInputMappingContext*> MobileExcludedMappingContexts;
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<UUserWidget> ScoreHUDClass;
 
-	/** Mobile controls widget to spawn */
-	UPROPERTY(EditAnywhere, Category="Input|Touch Controls")
-	TSubclassOf<UUserWidget> MobileControlsWidgetClass;
+	UPROPERTY()
+	UUserWidget* ScoreHUD;
+	
+	/** Typed reference to Basketball HUD (C++ base widget) */
+	UPROPERTY()
+	UBasketballHUDWidget* BasketballHUD;
 
-	/** Pointer to the mobile controls widget */
-	TObjectPtr<UUserWidget> MobileControlsWidget;
+	// ================= INPUT =================
 
-	/** Gameplay initialization */
-	virtual void BeginPlay() override;
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputMappingContext* DefaultMappingContext;
 
-	/** Input mapping context setup */
-	virtual void SetupInputComponent() override;
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* MoveAction;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* LookAction;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* ShootAction;
+
+	// ================= INPUT HANDLERS =================
+
+	void Move(const FInputActionValue& Value);
+	void Look(const FInputActionValue& Value);
+	void Shoot(const FInputActionValue& Value);
+
+	/*UFUNCTION()
+	void UpdateHUD();*/
 };

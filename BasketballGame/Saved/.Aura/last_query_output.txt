@@ -1,83 +1,62 @@
 Top file paths:
-D:/ClimbingGame/BasketballGame/Content/Input/Actions/IA_Look.uasset
-D:/ClimbingGame/BasketballGame/Content/Input/Actions/IA_Move.uasset
+D:/ClimbingGame/BasketballGameNew/Basketball_New_Repo_2/BasketballGame/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset
 
 
 
-File: Content_Input_Actions_IA_Look_uasset
-Relevance Score: 1.5546
+File: Content_ThirdPerson_Blueprints_BP_ThirdPersonCharacter_uasset
+Relevance Score: 1.4637
 
 
 
-asset_path: /Game/Input/Actions/IA_Look.IA_Look
+asset_path: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
 
 referencers:
   [
-  "/Game/Variant_Combat/Input/IMC_Combat",
-  "/Game/Variant_Combat/Input/IMC_Combat",
-  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
-  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
-  "/Game/Variant_Platforming/Input/IMC_Platforming",
-  "/Game/Variant_Platforming/Input/IMC_Platforming",
-  "/Game/Variant_Platforming/Blueprints/BP_PlatformingCharacter",
-  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
-  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
-  "/Game/Input/IMC_Default",
-  "/Game/Input/IMC_Default"
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode"
 ]
 
 dependencies:
   [
-  "/Script/Engine",
+  "/Game/Characters/Mannequins/Meshes/SKM_Quinn_Simple",
+  "/Script/BasketBallGame",
+  "/Game/UI/WBP_ScoreHUD",
   "/Script/EnhancedInput",
-  "/Script/EnhancedInput"
+  "/Game/Input/Actions/IA_Jump",
+  "/Game/Input/Actions/IA_Move",
+  "/Game/Input/Actions/IA_Look",
+  "/Game/Input/Actions/IA_MouseLook",
+  "/Game/Input/Touch/BPI_TouchInterface",
+  "/Game/Input/Actions/IA_PickupBall",
+  "/Game/Characters/Mannequins/Anims/Unarmed/ABP_Unarmed",
+  "/Script/InputBlueprintNodes",
+  "/Game/Input/Actions/IA_Shoot",
+  "/Script/NavigationSystem"
 ]
 
 content: asset path:
-/Game/Input/Actions/IA_Look.IA_Look
+/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+blueprint info:
+BP_ThirdPersonCharacter
+/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+BP_ThirdPersonCharacter_C
+/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+BasketBallGameCharacter
+BPI_TouchInterface_C, 
 
+variable info:
 
+Variables:
+- ShootAction (object) = No default value
 
+function info:
 
+Functions:
+UserConstructionScript
 
+component info:
 
+Components:
 
-
-File: Content_Input_Actions_IA_Move_uasset
-Relevance Score: 1.5473
-
-
-
-asset_path: /Game/Input/Actions/IA_Move.IA_Move
-
-referencers:
-  [
-  "/Game/Variant_Combat/Input/IMC_Combat",
-  "/Game/Variant_Combat/Input/IMC_Combat",
-  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
-  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
-  "/Game/Variant_SideScrolling/Input/IMC_SideScroller",
-  "/Game/Variant_SideScrolling/Input/IMC_SideScroller",
-  "/Game/Variant_SideScrolling/Blueprints/BP_SideScrollingCharacter",
-  "/Game/Variant_SideScrolling/Blueprints/BP_SideScrollingCharacter",
-  "/Game/Variant_Platforming/Input/IMC_Platforming",
-  "/Game/Variant_Platforming/Input/IMC_Platforming",
-  "/Game/Variant_Platforming/Blueprints/BP_PlatformingCharacter",
-  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
-  "/Game/Variant_Combat/Blueprints/BP_CombatCharacter",
-  "/Game/Input/IMC_Default",
-  "/Game/Input/IMC_Default"
-]
-
-dependencies:
-  [
-  "/Script/Engine",
-  "/Script/EnhancedInput",
-  "/Script/EnhancedInput"
-]
-
-content: asset path:
-/Game/Input/Actions/IA_Move.IA_Move
 
 
 

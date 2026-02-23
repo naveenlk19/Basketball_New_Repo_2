@@ -17,10 +17,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class USideScrollingUI *********************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_CALLBACK_WRAPPERS
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_CALLBACK_WRAPPERS
 BASKETBALLGAME_API UClass* Z_Construct_UClass_USideScrollingUI_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSideScrollingUI(); \
 	friend struct Z_Construct_UClass_USideScrollingUI_Statics; \
@@ -31,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(USideScrollingUI)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USideScrollingUI(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -43,13 +43,13 @@ public: \
 	NO_API virtual ~USideScrollingUI();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_13_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_13_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_CALLBACK_WRAPPERS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_CALLBACK_WRAPPERS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,6 +59,6 @@ class USideScrollingUI;
 // ********** End Class USideScrollingUI ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_UI_SideScrollingUI_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

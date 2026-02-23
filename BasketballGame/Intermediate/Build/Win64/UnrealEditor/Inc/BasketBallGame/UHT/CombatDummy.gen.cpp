@@ -242,14 +242,14 @@ ACombatDummy::~ACombatDummy() {}
 // ********** End Class ACombatDummy ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACombatDummy, ACombatDummy::StaticClass, TEXT("ACombatDummy"), &Z_Registration_Info_UClass_ACombatDummy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACombatDummy), 2323893611U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_2845327660(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_2845327660(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDummy_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

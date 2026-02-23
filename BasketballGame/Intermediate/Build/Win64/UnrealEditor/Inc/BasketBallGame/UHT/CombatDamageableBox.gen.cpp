@@ -259,14 +259,14 @@ ACombatDamageableBox::~ACombatDamageableBox() {}
 // ********** End Class ACombatDamageableBox *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACombatDamageableBox, ACombatDamageableBox::StaticClass, TEXT("ACombatDamageableBox"), &Z_Registration_Info_UClass_ACombatDamageableBox, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACombatDamageableBox), 1168907795U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_1962437050(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_1962437050(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatDamageableBox_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

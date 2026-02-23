@@ -17,22 +17,22 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Delegate FOnEnemyDied **********************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_24_DELEGATE \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_24_DELEGATE \
 BASKETBALLGAME_API void FOnEnemyDied_DelegateWrapper(const FMulticastScriptDelegate& OnEnemyDied);
 
 
 // ********** End Delegate FOnEnemyDied ************************************************************
 
 // ********** Begin Class ACombatEnemy *************************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCheckChargedAttack); \
 	DECLARE_FUNCTION(execCheckCombo);
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_CALLBACK_WRAPPERS
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_CALLBACK_WRAPPERS
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ACombatEnemy_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACombatEnemy(); \
 	friend struct Z_Construct_UClass_ACombatEnemy_Statics; \
@@ -44,7 +44,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ACombatEnemy*>(this); }
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACombatEnemy(ACombatEnemy&&) = delete; \
 	ACombatEnemy(const ACombatEnemy&) = delete; \
@@ -54,14 +54,14 @@ public: \
 	NO_API virtual ~ACombatEnemy();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_30_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_30_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_CALLBACK_WRAPPERS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_CALLBACK_WRAPPERS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -71,6 +71,6 @@ class ACombatEnemy;
 // ********** End Class ACombatEnemy ***************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_AI_CombatEnemy_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

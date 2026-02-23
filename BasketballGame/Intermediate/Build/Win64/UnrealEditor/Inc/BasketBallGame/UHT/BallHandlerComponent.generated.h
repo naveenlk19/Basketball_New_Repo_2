@@ -16,15 +16,16 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
-class ABasketball;
+class ABasketBall;
 
 // ********** Begin Class UBallHandlerComponent ****************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSetBall); \
-	DECLARE_FUNCTION(execFindNearestBall); \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execIsCharging); \
 	DECLARE_FUNCTION(execGetChargePercent); \
 	DECLARE_FUNCTION(execShootBall); \
 	DECLARE_FUNCTION(execStartCharging); \
+	DECLARE_FUNCTION(execSetBall); \
+	DECLARE_FUNCTION(execFindNearestBall); \
 	DECLARE_FUNCTION(execDropBall); \
 	DECLARE_FUNCTION(execTryPickupBall); \
 	DECLARE_FUNCTION(execHasBall);
@@ -32,7 +33,7 @@ class ABasketball;
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_UBallHandlerComponent_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBallHandlerComponent(); \
 	friend struct Z_Construct_UClass_UBallHandlerComponent_Statics; \
@@ -43,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(UBallHandlerComponent)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UBallHandlerComponent(UBallHandlerComponent&&) = delete; \
 	UBallHandlerComponent(const UBallHandlerComponent&) = delete; \
@@ -53,13 +54,13 @@ public: \
 	NO_API virtual ~UBallHandlerComponent();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_16_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_18_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_19_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -69,6 +70,6 @@ class UBallHandlerComponent;
 // ********** End Class UBallHandlerComponent ******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

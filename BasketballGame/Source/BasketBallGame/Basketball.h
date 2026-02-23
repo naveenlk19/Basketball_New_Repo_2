@@ -7,13 +7,13 @@
 #include "Basketball.generated.h"
 
 UCLASS()
-class BASKETBALLGAME_API ABasketball : public AActor
+class BASKETBALLGAME_API ABasketBall : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	/** Constructor */
-	ABasketball();
+	ABasketBall();
 
 	/** Called when the game starts or when spawned */
 	virtual void BeginPlay() override;
@@ -29,6 +29,18 @@ public:
 	/** Is the ball currently held by a player? */
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
 	bool bIsHeld;
+
+	/** Was this ball shot (launched by player)? */
+	UPROPERTY(BlueprintReadWrite, Category = "Ball State")
+	bool bWasShot;
+
+	/** Has this ball already scored on current shot attempt? */
+	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
+	bool bHasScoredThisShot;
+
+	/** Location where shot was initiated from */
+	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
+	FVector ShotStartLocation;
 
 	/** Current owner of the ball (if held) */
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")

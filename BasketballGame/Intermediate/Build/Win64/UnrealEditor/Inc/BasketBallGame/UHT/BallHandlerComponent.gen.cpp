@@ -12,7 +12,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBallHandlerComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
-BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketball_NoRegister();
+BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBall_NoRegister();
 BASKETBALLGAME_API UClass* Z_Construct_UClass_UBallHandlerComponent();
 BASKETBALLGAME_API UClass* Z_Construct_UClass_UBallHandlerComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
@@ -60,7 +60,7 @@ struct Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics
 {
 	struct BallHandlerComponent_eventFindNearestBall_Parms
 	{
-		ABasketball* ReturnValue;
+		ABasketBall* ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -78,7 +78,7 @@ struct Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BallHandlerComponent_eventFindNearestBall_Parms, ReturnValue), Z_Construct_UClass_ABasketball_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BallHandlerComponent_eventFindNearestBall_Parms, ReturnValue), Z_Construct_UClass_ABasketBall_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall_Statics::NewProp_ReturnValue,
 };
@@ -98,7 +98,7 @@ DEFINE_FUNCTION(UBallHandlerComponent::execFindNearestBall)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(ABasketball**)Z_Param__Result=P_THIS->FindNearestBall();
+	*(ABasketBall**)Z_Param__Result=P_THIS->FindNearestBall();
 	P_NATIVE_END;
 }
 // ********** End Class UBallHandlerComponent Function FindNearestBall *****************************
@@ -204,12 +204,65 @@ DEFINE_FUNCTION(UBallHandlerComponent::execHasBall)
 }
 // ********** End Class UBallHandlerComponent Function HasBall *************************************
 
+// ********** Begin Class UBallHandlerComponent Function IsCharging ********************************
+struct Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics
+{
+	struct BallHandlerComponent_eventIsCharging_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Shooting" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Is currently charging a shot? */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Is currently charging a shot?" },
+#endif
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((BallHandlerComponent_eventIsCharging_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(BallHandlerComponent_eventIsCharging_Parms), &Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBallHandlerComponent, nullptr, "IsCharging", Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::PropPointers), sizeof(Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::BallHandlerComponent_eventIsCharging_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::BallHandlerComponent_eventIsCharging_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UBallHandlerComponent_IsCharging()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBallHandlerComponent_IsCharging_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBallHandlerComponent::execIsCharging)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsCharging();
+	P_NATIVE_END;
+}
+// ********** End Class UBallHandlerComponent Function IsCharging **********************************
+
 // ********** Begin Class UBallHandlerComponent Function SetBall ***********************************
 struct Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics
 {
 	struct BallHandlerComponent_eventSetBall_Parms
 	{
-		ABasketball* Ball;
+		ABasketBall* Ball;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -227,7 +280,7 @@ struct Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BallHandlerComponent_eventSetBall_Parms, Ball), Z_Construct_UClass_ABasketball_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BallHandlerComponent_eventSetBall_Parms, Ball), Z_Construct_UClass_ABasketBall_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBallHandlerComponent_SetBall_Statics::NewProp_Ball,
 };
@@ -245,7 +298,7 @@ UFunction* Z_Construct_UFunction_UBallHandlerComponent_SetBall()
 }
 DEFINE_FUNCTION(UBallHandlerComponent::execSetBall)
 {
-	P_GET_OBJECT(ABasketball,Z_Param_Ball);
+	P_GET_OBJECT(ABasketBall,Z_Param_Ball);
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->SetBall(Z_Param_Ball);
@@ -387,6 +440,7 @@ void UBallHandlerComponent::StaticRegisterNativesUBallHandlerComponent()
 		{ "FindNearestBall", &UBallHandlerComponent::execFindNearestBall },
 		{ "GetChargePercent", &UBallHandlerComponent::execGetChargePercent },
 		{ "HasBall", &UBallHandlerComponent::execHasBall },
+		{ "IsCharging", &UBallHandlerComponent::execIsCharging },
 		{ "SetBall", &UBallHandlerComponent::execSetBall },
 		{ "ShootBall", &UBallHandlerComponent::execShootBall },
 		{ "StartCharging", &UBallHandlerComponent::execStartCharging },
@@ -430,12 +484,12 @@ struct Z_Construct_UClass_UBallHandlerComponent_Statics
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * Component that manages basketball possession for a character\n * Handles picking up, holding, and dropping the ball\n * Structured for future replication (multiplayer-ready)\n */" },
+		{ "Comment", "/**\n * Component that manages basketball possession for a character\n * Handles picking up, holding, dropping, and shooting the ball\n * Includes trajectory preview while charging\n */" },
 #endif
 		{ "IncludePath", "BallHandlerComponent.h" },
 		{ "ModuleRelativePath", "BallHandlerComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Component that manages basketball possession for a character\nHandles picking up, holding, and dropping the ball\nStructured for future replication (multiplayer-ready)" },
+		{ "ToolTip", "Component that manages basketball possession for a character\nHandles picking up, holding, dropping, and shooting the ball\nIncludes trajectory preview while charging" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallSocketName_MetaData[] = {
@@ -458,6 +512,16 @@ struct Z_Construct_UClass_UBallHandlerComponent_Statics
 		{ "ToolTip", "Maximum distance to detect balls for pickup" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentBall_MetaData[] = {
+		{ "Category", "Ball Handling" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Reference to currently held ball (null if no ball) */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Reference to currently held ball (null if no ball)" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxShotPower_MetaData[] = {
 		{ "Category", "Shooting" },
 #if !UE_BUILD_SHIPPING
@@ -468,14 +532,26 @@ struct Z_Construct_UClass_UBallHandlerComponent_Statics
 		{ "ToolTip", "Maximum shot power (velocity in cm/s)" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChargeTime_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MinPowerFraction_MetaData[] = {
 		{ "Category", "Shooting" },
+		{ "ClampMax", "0.9" },
+		{ "ClampMin", "0.1" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Time to charge from 0% to 100% power */" },
+		{ "Comment", "/** Minimum shot power as fraction of max (0.0 to 1.0) */" },
 #endif
 		{ "ModuleRelativePath", "BallHandlerComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Time to charge from 0% to 100% power" },
+		{ "ToolTip", "Minimum shot power as fraction of max (0.0 to 1.0)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChargeTime_MetaData[] = {
+		{ "Category", "Shooting" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Time to charge from min to max power (seconds) */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Time to charge from min to max power (seconds)" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentCharge_MetaData[] = {
@@ -488,31 +564,83 @@ struct Z_Construct_UClass_UBallHandlerComponent_Statics
 		{ "ToolTip", "Current shot charge (0.0 to 1.0)" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentBall_MetaData[] = {
-		{ "Category", "Ball Handling" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MinArcAngle_MetaData[] = {
+		{ "Category", "Shooting" },
+		{ "ClampMax", "70.0" },
+		{ "ClampMin", "20.0" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Reference to currently held ball (null if no ball) */" },
+		{ "Comment", "/** Arc angle at minimum charge (degrees) */" },
 #endif
 		{ "ModuleRelativePath", "BallHandlerComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Reference to currently held ball (null if no ball)" },
+		{ "ToolTip", "Arc angle at minimum charge (degrees)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxArcAngle_MetaData[] = {
+		{ "Category", "Shooting" },
+		{ "ClampMax", "80.0" },
+		{ "ClampMin", "30.0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Arc angle at maximum charge (degrees) */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Arc angle at maximum charge (degrees)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TrajectoryPointCount_MetaData[] = {
+		{ "Category", "Trajectory Preview" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Number of points in the trajectory preview arc */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Number of points in the trajectory preview arc" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TrajectoryTimeStep_MetaData[] = {
+		{ "Category", "Trajectory Preview" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Time step between trajectory points (seconds of simulated flight) */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Time step between trajectory points (seconds of simulated flight)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShowTrajectory_MetaData[] = {
+		{ "Category", "Trajectory Preview" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Show trajectory preview while charging? */" },
+#endif
+		{ "ModuleRelativePath", "BallHandlerComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Show trajectory preview while charging?" },
 #endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FNamePropertyParams NewProp_BallSocketName;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_PickupRange;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentBall;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxShotPower;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MinPowerFraction;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ChargeTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentCharge;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentBall;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MinArcAngle;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxArcAngle;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_TrajectoryPointCount;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_TrajectoryTimeStep;
+	static void NewProp_bShowTrajectory_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShowTrajectory;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UBallHandlerComponent_DropBall, "DropBall" }, // 2913962802
-		{ &Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall, "FindNearestBall" }, // 2037817779
+		{ &Z_Construct_UFunction_UBallHandlerComponent_FindNearestBall, "FindNearestBall" }, // 509652601
 		{ &Z_Construct_UFunction_UBallHandlerComponent_GetChargePercent, "GetChargePercent" }, // 1867656541
 		{ &Z_Construct_UFunction_UBallHandlerComponent_HasBall, "HasBall" }, // 801498223
-		{ &Z_Construct_UFunction_UBallHandlerComponent_SetBall, "SetBall" }, // 3620501388
+		{ &Z_Construct_UFunction_UBallHandlerComponent_IsCharging, "IsCharging" }, // 3928485742
+		{ &Z_Construct_UFunction_UBallHandlerComponent_SetBall, "SetBall" }, // 554532255
 		{ &Z_Construct_UFunction_UBallHandlerComponent_ShootBall, "ShootBall" }, // 3240519882
 		{ &Z_Construct_UFunction_UBallHandlerComponent_StartCharging, "StartCharging" }, // 3661124964
 		{ &Z_Construct_UFunction_UBallHandlerComponent_TryPickupBall, "TryPickupBall" }, // 2932183938
@@ -525,17 +653,33 @@ struct Z_Construct_UClass_UBallHandlerComponent_Statics
 };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_BallSocketName = { "BallSocketName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, BallSocketName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallSocketName_MetaData), NewProp_BallSocketName_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_PickupRange = { "PickupRange", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, PickupRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupRange_MetaData), NewProp_PickupRange_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentBall = { "CurrentBall", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, CurrentBall), Z_Construct_UClass_ABasketBall_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentBall_MetaData), NewProp_CurrentBall_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MaxShotPower = { "MaxShotPower", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, MaxShotPower), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxShotPower_MetaData), NewProp_MaxShotPower_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MinPowerFraction = { "MinPowerFraction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, MinPowerFraction), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinPowerFraction_MetaData), NewProp_MinPowerFraction_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_ChargeTime = { "ChargeTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, ChargeTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChargeTime_MetaData), NewProp_ChargeTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentCharge = { "CurrentCharge", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, CurrentCharge), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentCharge_MetaData), NewProp_CurrentCharge_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentBall = { "CurrentBall", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, CurrentBall), Z_Construct_UClass_ABasketball_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentBall_MetaData), NewProp_CurrentBall_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MinArcAngle = { "MinArcAngle", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, MinArcAngle), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinArcAngle_MetaData), NewProp_MinArcAngle_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MaxArcAngle = { "MaxArcAngle", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, MaxArcAngle), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxArcAngle_MetaData), NewProp_MaxArcAngle_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_TrajectoryPointCount = { "TrajectoryPointCount", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, TrajectoryPointCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrajectoryPointCount_MetaData), NewProp_TrajectoryPointCount_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_TrajectoryTimeStep = { "TrajectoryTimeStep", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBallHandlerComponent, TrajectoryTimeStep), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrajectoryTimeStep_MetaData), NewProp_TrajectoryTimeStep_MetaData) };
+void Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_bShowTrajectory_SetBit(void* Obj)
+{
+	((UBallHandlerComponent*)Obj)->bShowTrajectory = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_bShowTrajectory = { "bShowTrajectory", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBallHandlerComponent), &Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_bShowTrajectory_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShowTrajectory_MetaData), NewProp_bShowTrajectory_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBallHandlerComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_BallSocketName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_PickupRange,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentBall,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MaxShotPower,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MinPowerFraction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_ChargeTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentCharge,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_CurrentBall,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MinArcAngle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_MaxArcAngle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_TrajectoryPointCount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_TrajectoryTimeStep,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBallHandlerComponent_Statics::NewProp_bShowTrajectory,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UBallHandlerComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UBallHandlerComponent_Statics::DependentSingletons[])() = {
@@ -571,14 +715,14 @@ UBallHandlerComponent::~UBallHandlerComponent() {}
 // ********** End Class UBallHandlerComponent ******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBallHandlerComponent, UBallHandlerComponent::StaticClass, TEXT("UBallHandlerComponent"), &Z_Registration_Info_UClass_UBallHandlerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBallHandlerComponent), 1341568311U) },
+		{ Z_Construct_UClass_UBallHandlerComponent, UBallHandlerComponent::StaticClass, TEXT("UBallHandlerComponent"), &Z_Registration_Info_UClass_UBallHandlerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBallHandlerComponent), 2171628010U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_903718802(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_1126519837(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BallHandlerComponent_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -11,6 +11,8 @@
     <None Include="..\..\Source\BasketBallGameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,9 +31,24 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultPlugins.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\BasketBallGame">
       <UniqueIdentifier>{4223B9C8-AD2A-3486-87B4-E54D47E8E9CA}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\BasketBallGame\BallHandlerComponent.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BallHandlerComponent.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\Basketball.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\Basketball.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
     <None Include="..\..\Source\BasketBallGame\BasketBallGame.Build.cs">
       <Filter>Source\BasketBallGame</Filter>
     </None>
@@ -58,6 +75,42 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\BasketBallGame\BasketBallGamePlayerController.h">
       <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\BasketBallGameState.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BasketBallGameState.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\BasketballHoop.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BasketballHoop.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\BasketballHUDWidget.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BasketballHUDWidget.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\BasketballMatchComponent.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BasketballMatchComponent.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BasketBallGame\BasketballScoreManager.cpp">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BasketBallGame\BasketballScoreManager.h">
+      <Filter>Source\BasketBallGame</Filter>
+    </ClInclude>
+    <Filter Include="Source\BasketBallGame\Public">
+      <UniqueIdentifier>{97A97B05-6818-3058-8A2A-A308FBEC3B5B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\BasketBallGame\Public\BasketballGlobalTypes.h">
+      <Filter>Source\BasketBallGame\Public</Filter>
     </ClInclude>
     <Filter Include="Source\BasketBallGame\Variant_Combat">
       <UniqueIdentifier>{4EA0119D-1533-3657-9163-AEBEA61F7CB9}</UniqueIdentifier>

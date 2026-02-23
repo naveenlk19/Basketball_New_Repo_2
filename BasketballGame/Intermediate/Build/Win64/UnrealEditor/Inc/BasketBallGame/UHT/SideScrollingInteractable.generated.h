@@ -19,13 +19,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 
 // ********** Begin Interface USideScrollingInteractable *******************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execInteraction);
 
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_USideScrollingInteractable_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	BASKETBALLGAME_API USideScrollingInteractable(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -37,7 +37,7 @@ BASKETBALLGAME_API UClass* Z_Construct_UClass_USideScrollingInteractable_NoRegis
 	virtual ~USideScrollingInteractable() = default;
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_UINTERFACE_BODY() \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUSideScrollingInteractable(); \
 	friend struct Z_Construct_UClass_USideScrollingInteractable_Statics; \
@@ -48,15 +48,15 @@ public: \
 	DECLARE_SERIALIZER(USideScrollingInteractable)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_UINTERFACE_BODY() \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_GENERATED_UINTERFACE_BODY() \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~ISideScrollingInteractable() {} \
 public: \
@@ -65,12 +65,12 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_12_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_23_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_12_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h_15_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -80,6 +80,6 @@ class USideScrollingInteractable;
 // ********** End Interface USideScrollingInteractable *********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

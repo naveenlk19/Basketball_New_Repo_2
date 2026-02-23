@@ -7,7 +7,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Engine/StaticMesh.h"
 
-ABasketball::ABasketball()
+ABasketBall::ABasketBall()
 {
 	// Set this actor to call Tick() every frame (not needed for prototype)
 	PrimaryActorTick.bCanEverTick = false;
@@ -37,17 +37,35 @@ ABasketball::ABasketball()
 	// Initialize state
 	bIsHeld = false;
 	BallOwner = nullptr;
+
+	// Initialize shot tracking
+	bWasShot = false;
+	bHasScoredThisShot = false;
+	ShotStartLocation = FVector::ZeroVector;
 }
 
-void ABasketball::BeginPlay()
+void ABasketBall::BeginPlay()
 {
 	Super::BeginPlay();
 	
 	// Ball starts on ground with physics enabled
 	EnablePhysics();
+	
+	// ======== PHYSICS VALIDATION LOGGING ========
+	// Verify collision settings are correct to prevent scoring bugs
+	if (BallMesh && PickupRadius)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("[Basketball Physics Validation] %s"), *GetName());
+		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Collision Enabled: %d (Expected: 3=QueryAndPhysics)"), static_cast<int32>(BallMesh->GetCollisionEnabled()));
+		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Object Type: %d (Expected: 1=PhysicsBody)"), static_cast<int32>(BallMesh->GetCollisionObjectType()));
+		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Simulating Physics: %d"), BallMesh->IsSimulatingPhysics());
+		UE_LOG(LogTemp, Warning, TEXT("  PickupRadius Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(PickupRadius->GetCollisionEnabled()));
+		UE_LOG(LogTemp, Warning, TEXT("  PickupRadius Generate Overlap Events: %d"), PickupRadius->GetGenerateOverlapEvents());
+	}
+	// ========================================
 }
 
-void ABasketball::EnablePhysics()
+void ABasketBall::EnablePhysics()
 {
 	if (BallMesh)
 	{
@@ -57,7 +75,7 @@ void ABasketball::EnablePhysics()
 	}
 }
 
-void ABasketball::DisablePhysics()
+void ABasketBall::DisablePhysics()
 {
 	if (BallMesh)
 	{
@@ -67,7 +85,7 @@ void ABasketball::DisablePhysics()
 	}
 }
 
-void ABasketball::AttachToCharacter(AActor* Character, FName SocketName)
+void ABasketBall::AttachToCharacter(AActor* Character, FName SocketName)
 {
 	if (!Character)
 	{
@@ -105,7 +123,7 @@ void ABasketball::AttachToCharacter(AActor* Character, FName SocketName)
 	BallOwner = Character;
 }
 
-void ABasketball::DetachFromCharacter()
+void ABasketBall::DetachFromCharacter()
 {
 	// Detach from parent
 	FDetachmentTransformRules DetachRules(

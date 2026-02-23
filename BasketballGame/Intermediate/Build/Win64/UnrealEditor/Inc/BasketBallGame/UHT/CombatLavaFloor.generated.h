@@ -21,13 +21,13 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class ACombatLavaFloor *********************************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnFloorHit);
 
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ACombatLavaFloor_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACombatLavaFloor(); \
 	friend struct Z_Construct_UClass_ACombatLavaFloor_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(ACombatLavaFloor)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACombatLavaFloor(ACombatLavaFloor&&) = delete; \
 	ACombatLavaFloor(const ACombatLavaFloor&) = delete; \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~ACombatLavaFloor();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_15_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_15_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -64,6 +64,6 @@ class ACombatLavaFloor;
 // ********** End Class ACombatLavaFloor ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Combat_Gameplay_CombatLavaFloor_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

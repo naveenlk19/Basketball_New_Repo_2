@@ -15,10 +15,12 @@ void EmptyLinkFunctionForGeneratedCodeBasketBallGameCharacter() {}
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBallGameCharacter();
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ABasketBallGameCharacter_NoRegister();
 BASKETBALLGAME_API UClass* Z_Construct_UClass_UBallHandlerComponent_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_BasketBallGame();
 // ********** End Cross Module References **********************************************************
 
@@ -343,6 +345,27 @@ struct Z_Construct_UClass_ABasketBallGameCharacter_Statics
 		{ "ToolTip", "Pickup Ball Input Action" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScoreHUDClass_MetaData[] = {
+		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Score HUD widget class to auto-create on BeginPlay */" },
+#endif
+		{ "ModuleRelativePath", "BasketBallGameCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Score HUD widget class to auto-create on BeginPlay" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScoreHUDWidget_MetaData[] = {
+		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Created Score HUD widget instance */" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BasketBallGameCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Created Score HUD widget instance" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
@@ -352,6 +375,8 @@ struct Z_Construct_UClass_ABasketBallGameCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseLookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupBallAction;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ScoreHUDClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ScoreHUDWidget;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -374,6 +399,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBallGam
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBallGameCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_MouseLookAction = { "MouseLookAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBallGameCharacter, MouseLookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseLookAction_MetaData), NewProp_MouseLookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_PickupBallAction = { "PickupBallAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBallGameCharacter, PickupBallAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupBallAction_MetaData), NewProp_PickupBallAction_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_ScoreHUDClass = { "ScoreHUDClass", nullptr, (EPropertyFlags)0x0024080000010015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBallGameCharacter, ScoreHUDClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScoreHUDClass_MetaData), NewProp_ScoreHUDClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_ScoreHUDWidget = { "ScoreHUDWidget", nullptr, (EPropertyFlags)0x002008000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasketBallGameCharacter, ScoreHUDWidget), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScoreHUDWidget_MetaData), NewProp_ScoreHUDWidget_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasketBallGameCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_FollowCamera,
@@ -383,6 +410,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasketBa
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_LookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_MouseLookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_PickupBallAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_ScoreHUDClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasketBallGameCharacter_Statics::NewProp_ScoreHUDWidget,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasketBallGameCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABasketBallGameCharacter_Statics::DependentSingletons[])() = {
@@ -418,14 +447,14 @@ ABasketBallGameCharacter::~ABasketBallGameCharacter() {}
 // ********** End Class ABasketBallGameCharacter ***************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics
+struct Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABasketBallGameCharacter, ABasketBallGameCharacter::StaticClass, TEXT("ABasketBallGameCharacter"), &Z_Registration_Info_UClass_ABasketBallGameCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasketBallGameCharacter), 1641426481U) },
+		{ Z_Construct_UClass_ABasketBallGameCharacter, ABasketBallGameCharacter::StaticClass, TEXT("ABasketBallGameCharacter"), &Z_Registration_Info_UClass_ABasketBallGameCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasketBallGameCharacter), 2734723163U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_3858138070(TEXT("/Script/BasketBallGame"),
-	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_3669209878(TEXT("/Script/BasketBallGame"),
+	Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_BasketBallGameCharacter_h__Script_BasketBallGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

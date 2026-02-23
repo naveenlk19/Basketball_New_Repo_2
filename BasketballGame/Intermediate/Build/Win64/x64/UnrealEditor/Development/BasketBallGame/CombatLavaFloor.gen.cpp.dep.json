@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatlavafloor.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\x64\\basketballgameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\basketballgame\\definitions.basketballgame.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\source\\basketballgame\\variant_combat\\gameplay\\combatlavafloor.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\combatlavafloor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj": {}
+    "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj": {}
   },
   "projects": {
-    "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj": {
+    "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
+        "projectUniqueName": "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
         "projectName": "BasketBallGameModuleRules",
-        "projectPath": "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
+        "projectPath": "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
         "packagesPath": "C:\\Users\\Nandita\\.nuget\\packages\\",
-        "outputPath": "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\obj\\",
+        "outputPath": "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

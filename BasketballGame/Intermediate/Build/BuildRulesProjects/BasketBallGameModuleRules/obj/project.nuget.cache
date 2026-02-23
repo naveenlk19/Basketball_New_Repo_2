@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "55fHxPMh/6iqUE8odsvfUsgCXCfAC+xnWO6BVOsjcsg/ZFBIu9wPorgn3fJ9Orw3N0F3rOWxvDts5uUXGXkZsw==",
+  "dgSpecHash": "nFYoJV5K00De2FY8qNCODO/KXmLWwlUOz+q4M4P/EuVNkkuabrkv+a1gNB2BrZUd0kyRIfLLAnH57nvVjMAWdg==",
   "success": true,
-  "projectFilePath": "D:\\ClimbingGame\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
+  "projectFilePath": "D:\\ClimbingGame\\BasketballGameNew\\Basketball_New_Repo_2\\BasketballGame\\Intermediate\\Build\\BuildRulesProjects\\BasketBallGameModuleRules\\BasketBallGameModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nandita\\.nuget\\packages\\bitfaster.caching\\2.5.4\\bitfaster.caching.2.5.4.nupkg.sha512",
     "C:\\Users\\Nandita\\.nuget\\packages\\blake3\\2.2.0\\blake3.2.2.0.nupkg.sha512",

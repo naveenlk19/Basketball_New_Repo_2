@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UAnimNotify_EndDash ******************************************************
 BASKETBALLGAME_API UClass* Z_Construct_UClass_UAnimNotify_EndDash_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAnimNotify_EndDash(); \
 	friend struct Z_Construct_UClass_UAnimNotify_EndDash_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UAnimNotify_EndDash)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAnimNotify_EndDash(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UAnimNotify_EndDash();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_12_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_12_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UAnimNotify_EndDash;
 // ********** End Class UAnimNotify_EndDash ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_Platforming_Animation_AnimNotify_EndDash_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -21,13 +21,13 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class ASideScrollingSoftPlatform ***********************************************
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnSoftCollisionOverlap);
 
 
 BASKETBALLGAME_API UClass* Z_Construct_UClass_ASideScrollingSoftPlatform_NoRegister();
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASideScrollingSoftPlatform(); \
 	friend struct Z_Construct_UClass_ASideScrollingSoftPlatform_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(ASideScrollingSoftPlatform)
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ASideScrollingSoftPlatform(ASideScrollingSoftPlatform&&) = delete; \
 	ASideScrollingSoftPlatform(const ASideScrollingSoftPlatform&) = delete; \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~ASideScrollingSoftPlatform();
 
 
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_16_PROLOG
-#define FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_GENERATED_BODY \
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_16_PROLOG
+#define FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_INCLASS_NO_PURE_DECLS \
-	FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_ENHANCED_CONSTRUCTORS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_INCLASS_NO_PURE_DECLS \
+	FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -64,6 +64,6 @@ class ASideScrollingSoftPlatform;
 // ********** End Class ASideScrollingSoftPlatform *************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h
+#define CURRENT_FILE_ID FID_ClimbingGame_BasketballGameNew_Basketball_New_Repo_2_BasketballGame_Source_BasketBallGame_Variant_SideScrolling_Gameplay_SideScrollingSoftPlatform_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
