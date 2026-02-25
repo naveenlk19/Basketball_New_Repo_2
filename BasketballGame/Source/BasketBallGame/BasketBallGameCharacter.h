@@ -62,13 +62,13 @@ protected:
 
 	// ======== HUD Widget System ========
 
-	/** Score HUD widget class to auto-create on BeginPlay */
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
-	TSubclassOf<UUserWidget> ScoreHUDClass;
+	///** Score HUD widget class to auto-create on BeginPlay */
+	//UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
+	//TSubclassOf<UUserWidget> ScoreHUDClass;
 
-	/** Created Score HUD widget instance */
-	UPROPERTY(BlueprintReadOnly, Category = "UI")
-	UUserWidget* ScoreHUDWidget;
+	///** Created Score HUD widget instance */
+	//UPROPERTY(BlueprintReadOnly, Category = "UI")
+	//UUserWidget* ScoreHUDWidget;
 
 	/** BeginPlay override for widget creation */
 	virtual void BeginPlay() override;

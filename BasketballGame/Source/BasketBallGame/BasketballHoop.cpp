@@ -12,52 +12,52 @@
 
 ABasketBallHoop::ABasketBallHoop()
 {
-	// Enable ticking if needed for animations later
 	PrimaryActorTick.bCanEverTick = false;
 
-	// Create root component (invisible positioning anchor)
-	HoopRoot = CreateDefaultSubobject<USceneComponent>(TEXT("HoopRoot"));
-	RootComponent = HoopRoot;
+	// ================= ROOT (Backboard as Pivot) =================
 
-	// Create backboard mesh
 	Backboard = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Backboard"));
-	Backboard->SetupAttachment(HoopRoot);
+	RootComponent = Backboard;
+
 	Backboard->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	Backboard->SetCollisionResponseToAllChannels(ECR_Block);
-	Backboard->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f)); // At root (pivot is at backboard center)
 
-	// Create rim mesh (attached to backboard)
+	// ================= RIM =================
+
+
 	Rim = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Rim"));
-	Rim->SetupAttachment(Backboard); // Attached to backboard, not root
+	Rim->SetupAttachment(Backboard);
 	Rim->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	Rim->SetCollisionResponseToAllChannels(ECR_Block);
-	Rim->SetRelativeLocation(FVector(15.0f, 0.0f, -45.0f)); // Forward from backboard, below center
+	Rim->SetRelativeLocation(FVector(15.0f, 0.0f, -45.0f));
 
-	// Create top trigger (ball enters hoop) - attached to rim
+	// ================= TOP TRIGGER =================
+
 	TopTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("TopTrigger"));
-	TopTrigger->SetupAttachment(Rim); // Attached to rim
-	TopTrigger->SetBoxExtent(FVector(25.0f, 25.0f, 5.0f)); // 50cm diameter, 10cm height
-	TopTrigger->SetRelativeLocation(FVector(0.0f, 0.0f, -5.0f)); // Just below rim center
+	TopTrigger->SetupAttachment(Rim);
+	TopTrigger->SetBoxExtent(FVector(25.0f, 25.0f, 5.0f));
+	TopTrigger->SetRelativeLocation(FVector(0.0f, 0.0f, -5.0f));
 	TopTrigger->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	TopTrigger->SetCollisionResponseToAllChannels(ECR_Ignore);
 	TopTrigger->SetCollisionResponseToChannel(ECC_PhysicsBody, ECR_Overlap);
 	TopTrigger->SetGenerateOverlapEvents(true);
 
-	// Create bottom trigger (ball exits hoop - scores!)
+	// ================= BOTTOM TRIGGER =================
+
 	BottomTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("BottomTrigger"));
-	BottomTrigger->SetupAttachment(Rim); // Attached to rim
+	BottomTrigger->SetupAttachment(Rim);
 	BottomTrigger->SetBoxExtent(FVector(25.0f, 25.0f, 5.0f));
-	BottomTrigger->SetRelativeLocation(FVector(0.0f, 0.0f, -45.0f)); // 40cm below top trigger (net length)
+	BottomTrigger->SetRelativeLocation(FVector(0.0f, 0.0f, -45.0f));
 	BottomTrigger->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	BottomTrigger->SetCollisionResponseToAllChannels(ECR_Ignore);
 	BottomTrigger->SetCollisionResponseToChannel(ECC_PhysicsBody, ECR_Overlap);
 	BottomTrigger->SetGenerateOverlapEvents(true);
 
-	// Default values
-	PointValue = 2; // Standard 2-point shot
-	HoopHeight = 305.0f; // 10 feet / 305cm
+	// ================= DEFAULT VALUES =================
+
+	PointValue = 2;
+	HoopHeight = 305.0f;
 	CachedGameMode = nullptr;
-	
 }
 
 void ABasketBallHoop::BeginPlay()
@@ -97,29 +97,29 @@ void ABasketBallHoop::BeginPlay()
 					CachedGameMode = RetryWorld->GetAuthGameMode<ABasketBallGameGameMode>();
 					if (CachedGameMode)
 					{
-						UE_LOG(LogTemp, Log, TEXT("BasketballHoop: GameMode cached successfully on retry"));
+						//UE_LOG(LogTemp, Log, TEXT("BasketballHoop: GameMode cached successfully on retry"));
 					}
 				}
 			}, 0.1f, false);
 		}
 		else
 		{
-			UE_LOG(LogTemp, Log, TEXT("BasketballHoop: GameMode cached successfully at BeginPlay"));
+			//UE_LOG(LogTemp, Log, TEXT("BasketballHoop: GameMode cached successfully at BeginPlay"));
 		}
 	}
 	
 	// ======== PHYSICS VALIDATION LOGGING ========
 	// Verify trigger collision settings are correct to prevent double-scoring bugs
-	if (TopTrigger && BottomTrigger)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("[BasketballHoop Physics Validation] %s"), *GetName());
-		UE_LOG(LogTemp, Warning, TEXT("  TopTrigger Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(TopTrigger->GetCollisionEnabled()));
-		UE_LOG(LogTemp, Warning, TEXT("  TopTrigger Generate Overlap Events: %d"), TopTrigger->GetGenerateOverlapEvents());
-		UE_LOG(LogTemp, Warning, TEXT("  BottomTrigger Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(BottomTrigger->GetCollisionEnabled()));
-		UE_LOG(LogTemp, Warning, TEXT("  BottomTrigger Generate Overlap Events: %d"), BottomTrigger->GetGenerateOverlapEvents());
-	}
-	// ========================================
-	UE_LOG(LogTemp, Log, TEXT("Basketball Hoop initialized at height: %.0f cm"), HoopHeight);
+	//if (TopTrigger && BottomTrigger)
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("[BasketballHoop Physics Validation] %s"), *GetName());
+	//	UE_LOG(LogTemp, Warning, TEXT("  TopTrigger Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(TopTrigger->GetCollisionEnabled()));
+	//	UE_LOG(LogTemp, Warning, TEXT("  TopTrigger Generate Overlap Events: %d"), TopTrigger->GetGenerateOverlapEvents());
+	//	UE_LOG(LogTemp, Warning, TEXT("  BottomTrigger Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(BottomTrigger->GetCollisionEnabled()));
+	//	UE_LOG(LogTemp, Warning, TEXT("  BottomTrigger Generate Overlap Events: %d"), BottomTrigger->GetGenerateOverlapEvents());
+	//}
+	//// ========================================
+	//UE_LOG(LogTemp, Log, TEXT("Basketball Hoop initialized at height: %.0f cm"), HoopHeight);
 }
 
 void ABasketBallHoop::OnTopTriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
@@ -137,6 +137,7 @@ void ABasketBallHoop::OnTopTriggerBeginOverlap(UPrimitiveComponent* OverlappedCo
 	if (BallVelocity.Z > 0.0f)
 	{
 		// Ball is moving upward, not a valid shot
+		// Should we call shot missed here ?
 		return;
 	}
 
@@ -175,11 +176,15 @@ void ABasketBallHoop::OnBottomTriggerBeginOverlap(
 	// Must have passed top trigger first
 	if (!BallsInTopTrigger.Contains(Ball))
 	{
+		// should we call shot missed here 
 		return;
 	}
 
 	// Valid score
-	Ball->bHasScoredThisShot = true;	
+	Ball->bHasScoredThisShot = true;
+	Ball->ResetShotState();
+	Ball->GetWorld()->GetTimerManager().ClearTimer(Ball->ShotTimerHandle);
+	
 	BallsInTopTrigger.Remove(Ball);
 
 	// 🔥 Disable overlap ONLY for this ball mesh
@@ -187,6 +192,7 @@ void ABasketBallHoop::OnBottomTriggerBeginOverlap(
 
 	RegisterScoreWithGameMode(Ball);
 	UE_LOG(LogTemp, Warning, TEXT("VALID SCORE REGISTERED"));
+	
 }
 
 void ABasketBallHoop::RegisterScoreWithGameMode(ABasketBall* Ball)
@@ -211,7 +217,7 @@ void ABasketBallHoop::RegisterScoreWithGameMode(ABasketBall* Ball)
 	}
 
 	CachedGameMode->RegisterShotSuccess(PointValue);
-
+	
 	UE_LOG(LogTemp, Warning, TEXT("Hoop: Shot SUCCESS | +%d points"), PointValue);
 
 	OnShotMade();

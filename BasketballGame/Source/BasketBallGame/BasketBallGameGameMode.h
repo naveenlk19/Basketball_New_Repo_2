@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-//#include "BasketballGlobalTypes.h"
+#include "BasketballGlobalTypes.h"
 #include "BasketBallGameGameMode.generated.h"
 
 class UBasketballMatchComponent;
@@ -47,7 +47,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Basketball|Snapshot")
 	FBasketballGameSnapshot GetGameSnapshot() const;
 	
-	void RefreshAllPlayerHUDs();
+	void RefreshAllPlayerHUD();
 	
 	// ========================
 	// Read-Only Access (UI)

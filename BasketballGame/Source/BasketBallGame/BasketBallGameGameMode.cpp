@@ -32,11 +32,10 @@ void ABasketBallGameGameMode::RegisterShotSuccess(int32 PointValue)
 	if (!MatchComponent) return;
 
 	MatchComponent->RegisterShotSuccess(PointValue);
-
-	UE_LOG(LogTemp, Warning, TEXT("GameMode: Shot Success | Points: %d"), PointValue);
 	
 	// Refresh HUD for all players
-	RefreshAllPlayerHUDs();
+	RefreshAllPlayerHUD();
+	UE_LOG(LogTemp, Warning, TEXT("GameMode: Shot Success | Points: %d"), PointValue);
 }
 
 void ABasketBallGameGameMode::RegisterShotMiss()
@@ -48,7 +47,7 @@ void ABasketBallGameGameMode::RegisterShotMiss()
 	UE_LOG(LogTemp, Warning, TEXT("GameMode: Shot Miss"));
 	
 	// Refresh HUD for all players
-	RefreshAllPlayerHUDs();
+	RefreshAllPlayerHUD();
 }
 
 // ========================
@@ -112,17 +111,20 @@ FBasketballGameSnapshot ABasketBallGameGameMode::GetGameSnapshot() const
 	return MatchComponent->GetGameSnapshot();
 }
 
-void ABasketBallGameGameMode::RefreshAllPlayerHUDs()
+void ABasketBallGameGameMode::RefreshAllPlayerHUD()
 {
-	// Trigger HUD refresh for all players (authority only)
-	// In single-player, this is just the local player
-	// In multiplayer, this would iterate all PlayerControllers
-	
-	if (UWorld* World = GetWorld())
+	FBasketballGameSnapshot Snapshot = GetGameSnapshot();
+
+	for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
 	{
-		if (ABasketBallGamePlayerController* PC = Cast<ABasketBallGamePlayerController>(World->GetFirstPlayerController()))
+		ABasketBallGamePlayerController* PC =
+			Cast<ABasketBallGamePlayerController>(It->Get());
+
+		if (PC)
 		{
-			PC->RefreshHUD();
+			// Call a NON-RPC function
+			PC->HandleServerHUDUpdate(Snapshot);
 		}
 	}
 }
+

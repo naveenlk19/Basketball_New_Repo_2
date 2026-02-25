@@ -263,12 +263,17 @@ void UBallHandlerComponent::ShootBall()
 	// Detach ball from hand
 	BallToShoot->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	BallToShoot->bIsHeld = false;
+
+	BallToShoot->EnablePhysics();
+	BallToShoot->BallMesh->SetPhysicsLinearVelocity(LaunchVelocity);
+
+	BallToShoot->MarkAsShot();
 	CurrentBall = nullptr;
 
-	// 🔥 CRITICAL: Mark shot state
-	BallToShoot->bWasShot = true;
-	BallToShoot->BallMesh->SetGenerateOverlapEvents(true);
-	BallToShoot->bHasScoredThisShot = false;
+	//// 🔥 CRITICAL: Mark shot state
+	//BallToShoot->bWasShot = true;
+	//BallToShoot->BallMesh->SetGenerateOverlapEvents(true);
+	//BallToShoot->bHasScoredThisShot = false;
 
 	// Apply physics
 	BallToShoot->EnablePhysics();

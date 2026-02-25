@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasketBallGameModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22783b96a9c8716c675c649d6eb7c06e40ceaf8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e420b955839ebfb0a5d3ef9f6a59cf44fca82d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasketBallGameModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasketBallGameModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

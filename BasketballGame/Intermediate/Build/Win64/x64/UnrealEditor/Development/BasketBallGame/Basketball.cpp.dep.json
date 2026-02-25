@@ -20,7 +20,15 @@
             "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
             "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
-            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h"
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\source\\basketballgame\\basketballgamegamemode.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\source\\basketballgame\\public\\basketballglobaltypes.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\basketballglobaltypes.generated.h",
+            "d:\\climbinggame\\basketballgamenew\\basketball_new_repo_2\\basketballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\basketballgame\\uht\\basketballgamegamemode.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

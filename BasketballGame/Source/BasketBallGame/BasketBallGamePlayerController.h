@@ -3,7 +3,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "InputActionValue.h"
-#include "BasketBallGamePlayerController.generated.h"
+#include "BasketballGlobalTypes.h"
+#include "BasketBAllGamePlayerController.generated.h"
 
 class UInputMappingContext;
 class UInputAction;
@@ -22,22 +23,25 @@ public:
 	// ================= HUD BRIDGE =================
 	
 	/** Refresh HUD with latest gameplay snapshot (called by GameMode after scoring events) */
-	UFUNCTION()
-	void RefreshHUD();
+	void HandleServerHUDUpdate(const FBasketballGameSnapshot& Snapshot);
+
+	UFUNCTION(Client, Reliable)
+	void Client_RefreshHUD(const FBasketballGameSnapshot& Snapshot);
 
 protected:
 
 	// ================= UI =================
 
 	UPROPERTY(EditDefaultsOnly, Category = "UI")
-	TSubclassOf<UUserWidget> ScoreHUDClass;
+	TSubclassOf<UBasketballHUDWidget> ScoreHUDClass;
 
 	UPROPERTY()
-	UUserWidget* ScoreHUD;
+	//UUserWidget* ScoreHUD;
+	UBasketballHUDWidget* ScoreHUD;
 	
-	/** Typed reference to Basketball HUD (C++ base widget) */
-	UPROPERTY()
-	UBasketballHUDWidget* BasketballHUD;
+	///** Typed reference to Basketball HUD (C++ base widget) */
+	//UPROPERTY()
+	//UBasketballHUDWidget* BasketballHUD;
 
 	// ================= INPUT =================
 
@@ -59,6 +63,5 @@ protected:
 	void Look(const FInputActionValue& Value);
 	void Shoot(const FInputActionValue& Value);
 
-	/*UFUNCTION()
-	void UpdateHUD();*/
+	
 };

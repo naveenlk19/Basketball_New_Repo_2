@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "BasketballGlobalTypes.h"
+#include "Components/TextBlock.h"
 #include "BasketballHUDWidget.generated.h"
+
 
 /**
  * Basketball HUD Widget (C++ Base Class)
@@ -31,24 +33,26 @@
 UCLASS()
 class BASKETBALLGAME_API UBasketballHUDWidget : public UUserWidget
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	/**
-	 * Refresh HUD with latest gameplay snapshot
-	 * 
-	 * Called by PlayerController after scoring events.
-	 * Implement this event in Blueprint to update UI elements.
-	 * 
-	 * @param Snapshot - Complete gameplay data snapshot (read-only)
-	 * 
-	 * Blueprint Usage:
-	 * - Break Snapshot struct
-	 * - Set Score text widget
-	 * - Set Attempts text widget
-	 * - Set Streak text widget
-	 * - Set Efficiency text widget (format as percentage)
-	 */
-	UFUNCTION(BlueprintImplementableEvent, Category = "HUD")
-	void RefreshHUD(const FBasketballGameSnapshot& Snapshot);
+
+    void UpdateFromSnapshot(FBasketballGameSnapshot Snapshot);
+
+protected:
+
+    UPROPERTY(meta = (BindWidget))
+    UTextBlock* ScoreText;
+
+    UPROPERTY(meta = (BindWidget))
+    UTextBlock* AttemptsText;
+
+    UPROPERTY(meta = (BindWidget))
+    UTextBlock* EfficiencyText; 
+    
+    UPROPERTY(meta = (BindWidget))
+    UTextBlock* CurrentStreakText;
+    
+    UPROPERTY(meta = (BindWidget))
+    UTextBlock* BestStreakText;
 };

@@ -4,12 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "TimerManager.h"
 #include "Basketball.generated.h"
 
 UCLASS()
 class BASKETBALLGAME_API ABasketBall : public AActor
 {
 	GENERATED_BODY()
+
+private: 
+	
 	
 public:	
 	/** Constructor */
@@ -30,6 +34,9 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
 	bool bIsHeld;
 
+	// Timer to detect missed shot
+	FTimerHandle ShotTimerHandle;
+	// ================= SHOT STATE =================
 	/** Was this ball shot (launched by player)? */
 	UPROPERTY(BlueprintReadWrite, Category = "Ball State")
 	bool bWasShot;
@@ -42,6 +49,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
 	FVector ShotStartLocation;
 
+	
 	/** Current owner of the ball (if held) */
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
 	AActor* BallOwner;
@@ -65,4 +73,13 @@ public:
 	/** Check if ball can be picked up */
 	UFUNCTION(BlueprintPure, Category = "Ball")
 	bool CanBePickedUp() const { return !bIsHeld; }
+
+
+	void HandleShotTimeout();
+	// ================= SHOT API =================
+
+	void MarkAsShot();
+
+	void ResetShotState();
+
 };

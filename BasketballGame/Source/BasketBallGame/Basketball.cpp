@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "Basketball.h"
 #include "Components/StaticMeshComponent.h"
@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Engine/StaticMesh.h"
+#include "BasketBallGameGameMode.h"
 
 ABasketBall::ABasketBall()
 {
@@ -22,6 +23,9 @@ ABasketBall::ABasketBall()
 	BallMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	BallMesh->SetCollisionObjectType(ECollisionChannel::ECC_PhysicsBody);
 	BallMesh->SetCollisionResponseToAllChannels(ECR_Block);
+	BallMesh->SetNotifyRigidBodyCollision(true);
+	BallMesh->BodyInstance.SetCollisionProfileName("PhysicsActor");
+
 	
 	// Set mass for basketball feel (approximately 0.62 kg in real life)
 	BallMesh->SetMassOverrideInKg(NAME_None, 0.62f, true);
@@ -51,28 +55,61 @@ void ABasketBall::BeginPlay()
 	// Ball starts on ground with physics enabled
 	EnablePhysics();
 	
-	// ======== PHYSICS VALIDATION LOGGING ========
-	// Verify collision settings are correct to prevent scoring bugs
-	if (BallMesh && PickupRadius)
+
+}
+void ABasketBall::HandleShotTimeout()
+{
+	if (!bWasShot)
+		return;
+
+	if (bHasScoredThisShot)
+		return;
+
+	UE_LOG(LogTemp, Warning, TEXT("MISS (Timer Based)"));
+
+	if (ABasketBallGameGameMode* GM =
+		GetWorld()->GetAuthGameMode<ABasketBallGameGameMode>())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("[Basketball Physics Validation] %s"), *GetName());
-		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Collision Enabled: %d (Expected: 3=QueryAndPhysics)"), static_cast<int32>(BallMesh->GetCollisionEnabled()));
-		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Object Type: %d (Expected: 1=PhysicsBody)"), static_cast<int32>(BallMesh->GetCollisionObjectType()));
-		UE_LOG(LogTemp, Warning, TEXT("  BallMesh Simulating Physics: %d"), BallMesh->IsSimulatingPhysics());
-		UE_LOG(LogTemp, Warning, TEXT("  PickupRadius Collision Enabled: %d (Expected: 1=QueryOnly)"), static_cast<int32>(PickupRadius->GetCollisionEnabled()));
-		UE_LOG(LogTemp, Warning, TEXT("  PickupRadius Generate Overlap Events: %d"), PickupRadius->GetGenerateOverlapEvents());
+		GM->RegisterShotMiss();
 	}
-	// ========================================
+
+	ResetShotState();
+}
+void ABasketBall::MarkAsShot()
+{
+	bWasShot = true;
+	bHasScoredThisShot = false;
+
+	// Start miss timer (2 seconds)
+	GetWorld()->GetTimerManager().SetTimer(
+		ShotTimerHandle,
+		this,
+		&ABasketBall::HandleShotTimeout,
+		2.0f,
+		false
+	);
+}
+
+void ABasketBall::ResetShotState()
+{
+	bWasShot = false;
+	bHasScoredThisShot = false;
+
+	//UE_LOG(LogTemp, Log, TEXT("Ball shot state reset"));
 }
 
 void ABasketBall::EnablePhysics()
 {
 	if (BallMesh)
 	{
+		BallMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		BallMesh->SetSimulatePhysics(true);
 		BallMesh->SetEnableGravity(true);
-		BallMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		BallMesh->SetNotifyRigidBodyCollision(true);
+		BallMesh->SetGenerateOverlapEvents(true);
+		BallMesh->RecreatePhysicsState();  // 🔥 ensures hit events work
 	}
+	
 }
 
 void ABasketBall::DisablePhysics()

@@ -13,15 +13,16 @@ void ABasketBallGamePlayerController::BeginPlay()
 	// ===== HUD =====
 	if (IsLocalController() && ScoreHUDClass)
 	{
-		ScoreHUD = CreateWidget<UUserWidget>(this, ScoreHUDClass);
+		ScoreHUD = CreateWidget< UBasketballHUDWidget>(this, ScoreHUDClass);
 		if (ScoreHUD)
 		{
 			// Cast to typed reference for snapshot access
-			BasketballHUD = Cast<UBasketballHUDWidget>(ScoreHUD);
-			if (!BasketballHUD)
+			//BasketballHUD = Cast<UBasketballHUDWidget>(ScoreHUD);
+			//BasketballHUD = ScoreHUD;
+			/*if (!BasketballHUD)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("PlayerController: HUD is not a UBasketballHUDWidget - RefreshHUD will not work"));
-			}
+			}*/
 			
 			ScoreHUD->AddToViewport();
 			UE_LOG(LogTemp, Warning, TEXT("PlayerController: HUD Created"));
@@ -61,6 +62,46 @@ void ABasketBallGamePlayerController::SetupInputComponent()
 	}
 }
 
+void ABasketBallGamePlayerController::HandleServerHUDUpdate(
+	const FBasketballGameSnapshot& Snapshot)
+{
+	if (IsLocalController())
+	{
+		// If we are local (listen server case)
+		if (IsValid(ScoreHUD))
+		{
+			ScoreHUD->UpdateFromSnapshot(Snapshot);
+		}
+	}
+	else
+	{
+		// If remote client
+		Client_RefreshHUD(Snapshot);
+	}
+}
+
+// ================= HUD BRIDGE =================
+//void ABasketBallGamePlayerController::Client_RefreshHUD(const FBasketballGameSnapshot& Snapshot)
+//{
+//	
+//}
+
+void ABasketBallGamePlayerController::Client_RefreshHUD_Implementation(
+	const FBasketballGameSnapshot& Snapshot)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Client_RefreshHUD on %s | IsLocal=%d | HasAuthority=%d"),
+		*GetName(),
+		IsLocalController(),
+		HasAuthority());
+
+	if (!IsValid(ScoreHUD))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ScoreHUD is NULL"));
+		return;
+	}
+
+	ScoreHUD->UpdateFromSnapshot(Snapshot);
+}
 void ABasketBallGamePlayerController::Move(const FInputActionValue& Value)
 {
 	FVector2D Input = Value.Get<FVector2D>();
@@ -86,20 +127,8 @@ void ABasketBallGamePlayerController::Look(const FInputActionValue& Value)
 void ABasketBallGamePlayerController::Shoot(const FInputActionValue& Value)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Shoot Pressed"));
+	
 }
 
-// ================= HUD BRIDGE =================
 
-void ABasketBallGamePlayerController::RefreshHUD()
-{
-	// Bridge function: Fetch snapshot from GameMode and forward to HUD
-	// PlayerController does NOT compute or store any gameplay data
-	
-	if (!BasketballHUD) return;
-	
-	if (ABasketBallGameGameMode* GM = GetWorld()->GetAuthGameMode<ABasketBallGameGameMode>())
-	{
-		FBasketballGameSnapshot Snapshot = GM->GetGameSnapshot();
-		BasketballHUD->RefreshHUD(Snapshot);
-	}
-}
+

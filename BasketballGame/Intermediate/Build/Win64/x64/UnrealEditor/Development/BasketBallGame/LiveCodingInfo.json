@@ -2,25 +2,26 @@
 	"RemapUnityFiles": 
 	{
 		"Module.BasketBallGame.1.cpp.obj": [
-			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_CheckChargedAttack.gen.cpp.obj",
 			"AnimNotify_CheckCombo.gen.cpp.obj",
 			"AnimNotify_DoAttackTrace.gen.cpp.obj",
 			"AnimNotify_EndDash.gen.cpp.obj",
 			"BallHandlerComponent.gen.cpp.obj",
 			"Basketball.gen.cpp.obj",
-			"BasketBallGame.init.gen.cpp.obj",
-			"BasketBallGameCharacter.gen.cpp.obj",
 			"BasketBallGameGameMode.gen.cpp.obj",
-			"BasketBallGamePlayerController.gen.cpp.obj",
 			"BasketBallGameState.gen.cpp.obj",
 			"BasketballGlobalTypes.gen.cpp.obj",
 			"BasketballHoop.gen.cpp.obj",
-			"BasketballHUDWidget.gen.cpp.obj",
 			"BasketballMatchComponent.gen.cpp.obj",
 			"BasketballScoreManager.gen.cpp.obj",
 			"CombatActivatable.gen.cpp.obj",
 			"CombatActivationVolume.gen.cpp.obj",
+			"BasketBallGame.init.gen.cpp.obj",
+			"BasketBallGameCharacter.gen.cpp.obj",
+			"BasketBallGamePlayerController.gen.cpp.obj",
+			"BasketballHUDWidget.gen.cpp.obj"
+		],
+		"Module.BasketBallGame.2.cpp.obj": [
 			"CombatAIController.gen.cpp.obj",
 			"CombatAttacker.gen.cpp.obj",
 			"CombatCharacter.gen.cpp.obj",
@@ -36,7 +37,9 @@
 			"CombatPlayerController.gen.cpp.obj",
 			"CombatStateTreeUtility.gen.cpp.obj",
 			"EnvQueryContext_Player.gen.cpp.obj",
-			"PlatformingCharacter.gen.cpp.obj",
+			"PlatformingCharacter.gen.cpp.obj"
+		],
+		"Module.BasketBallGame.3.cpp.obj": [
 			"PlatformingGameMode.gen.cpp.obj",
 			"PlatformingPlayerController.gen.cpp.obj",
 			"SideScrollingAIController.gen.cpp.obj",
@@ -51,10 +54,12 @@
 			"SideScrollingPlayerController.gen.cpp.obj",
 			"SideScrollingSoftPlatform.gen.cpp.obj",
 			"SideScrollingStateTreeUtility.gen.cpp.obj",
-			"SideScrollingUI.gen.cpp.obj"
-		],
-		"Module.BasketBallGame.2.cpp.obj": [
+			"SideScrollingUI.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"BasketBallGame.cpp.obj",
+			"BasketBallGameState.cpp.obj",
+			"BasketballMatchComponent.cpp.obj",
+			"BasketballScoreManager.cpp.obj",
 			"CombatAIController.cpp.obj",
 			"CombatEnemy.cpp.obj",
 			"CombatEnemySpawner.cpp.obj",
@@ -97,11 +102,8 @@
 			"BasketBallGameCharacter.cpp.obj",
 			"BasketBallGameGameMode.cpp.obj",
 			"BasketBallGamePlayerController.cpp.obj",
-			"BasketBallGameState.cpp.obj",
 			"BasketballHoop.cpp.obj",
-			"BasketballHUDWidget.cpp.obj",
-			"BasketballMatchComponent.cpp.obj",
-			"BasketballScoreManager.cpp.obj"
+			"BasketballHUDWidget.cpp.obj"
 		]
 	}
 }
