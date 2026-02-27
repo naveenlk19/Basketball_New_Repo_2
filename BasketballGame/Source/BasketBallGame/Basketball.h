@@ -54,6 +54,9 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Ball State")
 	AActor* BallOwner;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Shot")
+	float ShotValidationTime = 3.0f;
+
 	/** Enable physics simulation (when ball is loose) */
 	UFUNCTION(BlueprintCallable, Category = "Ball")
 	void EnablePhysics();

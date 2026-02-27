@@ -8,6 +8,8 @@
 #include "Camera/CameraComponent.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
+#include "BasketBallHoop.h"
+#include "BasketBallGameCharacter.h"
 
 UBallHandlerComponent::UBallHandlerComponent()
 {
@@ -33,32 +35,116 @@ UBallHandlerComponent::UBallHandlerComponent()
 	TrajectoryPointCount = 30;
 	TrajectoryTimeStep = 0.05f; // 50ms between points
 	bShowTrajectory = true;
+	CachedCharacter = Cast<ABasketBallGameCharacter>(GetOwner());
+
 }
 
 void UBallHandlerComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	CachedCharacter = Cast<ABasketBallGameCharacter>(GetOwner());
+	if (!CachedCharacter)
+		return;
+
+	UStaticMeshComponent* DribbleMesh = CachedCharacter->DribbleVisualMesh;
+	if (!DribbleMesh)
+		return;
+
+	// IMPORTANT:
+	// Do NOT call RegisterComponent() here
+	// because it was already created using CreateDefaultSubobject
+	// in the Character constructor.
+
+	DribbleMesh->AttachToComponent(
+		CachedCharacter->GetMesh(),
+		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+		BallSocketName
+	);
+
+	DribbleMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DribbleMesh->SetHiddenInGame(true);
 }
 
-void UBallHandlerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+FVector UBallHandlerComponent::CalculatePerfectShotVelocity() const
+{
+	AActor* Owner = GetOwner();
+	if (!Owner) return FVector::ZeroVector;
+
+	// Find hoop actor (simplest version)
+	AActor* Hoop = UGameplayStatics::GetActorOfClass(
+		GetWorld(),
+		ABasketBallHoop::StaticClass());
+
+	if (!Hoop) return FVector::ZeroVector;
+
+	FVector Start = CurrentBall->GetActorLocation();
+	FVector Target = Hoop->GetActorLocation();
+
+	FVector Direction = (Target - Start).GetSafeNormal();
+
+	float SuperSpeed = 1800.f;
+
+	return Direction * SuperSpeed;
+}
+
+// ======== Ball Handling void UBallHandlerComponent::TickComponent
+
+void UBallHandlerComponent::TickComponent(float DeltaTime,ELevelTick TickType,
+	FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	// ===============================
+	// Shot Charging Logic
+	// ===============================
+
 	if (bIsCharging && HasBall())
 	{
-		// Update charge value in real-time
 		float ElapsedTime = GetWorld()->GetTimeSeconds() - ChargeStartTime;
 		CurrentCharge = FMath::Clamp(ElapsedTime / ChargeTime, 0.0f, 1.0f);
 
-		// Update trajectory preview
 		if (bShowTrajectory)
 		{
 			UpdateTrajectoryPreview();
 		}
 	}
+
+	// ===============================
+	// Fake Dribble Logic
+	// ===============================
+
+	if (!HasBall() || !IsDribbling() || !CurrentBall)
+	{
+		return;
+	}
+
+	// Time-based bounce (smooth & stable)
+	const float Time = GetWorld()->GetTimeSeconds();
+
+	constexpr float BounceFrequency = 8.f;
+	constexpr float BounceAmplitude = 8.f;
+
+	DribbleTime += DeltaTime;
+
+	float Alpha = FMath::Sin(DribbleTime * BounceFrequency);
+
+	// Make downward faster than upward
+	float OffsetZ = (Alpha > 0.f)
+		? Alpha * BounceAmplitude * 0.5f   // slow rise
+		: Alpha * BounceAmplitude * 1.5f;  // fast drop
+
+	FVector NewLocation = InitialBallRelativeLocation;
+	NewLocation.Z += OffsetZ;
+
+	USceneComponent* Root = CurrentBall->GetRootComponent();
+	if (!Root) return;
+
+	Root->SetRelativeLocation(NewLocation);
 }
 
-// ======== Ball Handling ========
+
+
 
 bool UBallHandlerComponent::TryPickupBall()
 {
@@ -100,12 +186,14 @@ bool UBallHandlerComponent::TryPickupBall()
 	);
 
 	CurrentBall = NearestBall;
+	InitialBallRelativeLocation = CurrentBall->GetRootComponent()->GetRelativeLocation();
 	UE_LOG(LogTemp, Log, TEXT("Picked up ball: %s"), *NearestBall->GetName());
 	return true;
 }
 
 void UBallHandlerComponent::DropBall()
 {
+	SetWantsToDribble(false);
 	if (!HasBall())
 	{
 		return;
@@ -118,6 +206,7 @@ void UBallHandlerComponent::DropBall()
 
 	// Clear trajectory if showing
 	ClearTrajectoryPreview();
+	
 }
 
 ABasketBall* UBallHandlerComponent::FindNearestBall()
@@ -197,6 +286,58 @@ void UBallHandlerComponent::StartCharging()
 	UE_LOG(LogTemp, Log, TEXT("Started charging shot"));
 }
 
+void UBallHandlerComponent::SetWantsToDribble(bool bNewValue)
+{
+	if (bWantsToDribble == bNewValue)
+		return;
+
+	bWantsToDribble = bNewValue;
+
+	ABasketBallGameCharacter* Character =
+		Cast<ABasketBallGameCharacter>(GetOwner());
+
+	if (!Character)
+		return;
+
+	if (bWantsToDribble && HasBall())
+	{
+		// Reset timing
+		DribbleTime = 0.f;
+
+		if (Character->DribbleVisualMesh && CurrentBall && CurrentBall->BallMesh)
+		{
+			Character->DribbleVisualMesh->SetStaticMesh(
+				CurrentBall->BallMesh->GetStaticMesh()
+			);
+
+			Character->DribbleVisualMesh->SetHiddenInGame(false);
+		}
+
+		// Hide real gameplay ball
+		CurrentBall->SetActorHiddenInGame(true);
+	}
+	else
+	{
+		// STOP DRIBBLE
+
+		if (Character->DribbleVisualMesh)
+		{
+			Character->DribbleVisualMesh->SetHiddenInGame(true);
+		}
+
+		if (CurrentBall)
+		{
+			// Show real gameplay ball again
+			CurrentBall->SetActorHiddenInGame(false);
+		}
+	}
+}
+
+bool UBallHandlerComponent::IsDribbling() const
+{
+	return HasBall() && bWantsToDribble;
+}
+
 FVector UBallHandlerComponent::CalculateLaunchVelocity() const
 {
 	ACharacter* Character = Cast<ACharacter>(GetOwner());
@@ -236,16 +377,26 @@ FVector UBallHandlerComponent::CalculateLaunchVelocity() const
 
 void UBallHandlerComponent::ShootBall()
 {
+	SetWantsToDribble(false);
 	if (!bIsCharging || !HasBall())
-	{
 		return;
-	}
 
-	// Final charge clamp
-	const float ElapsedTime = GetWorld()->GetTimeSeconds() - ChargeStartTime;
-	CurrentCharge = FMath::Clamp(ElapsedTime / ChargeTime, 0.0f, 1.0f);
+	const float ElapsedTime =
+		GetWorld()->GetTimeSeconds() - ChargeStartTime;
 
-	const FVector LaunchVelocity = CalculateLaunchVelocity();
+	CurrentCharge = FMath::Clamp(
+		ElapsedTime / ChargeTime,
+		0.0f,
+		1.0f);
+
+	ABasketBallGameGameMode* GM =
+		GetWorld()->GetAuthGameMode<ABasketBallGameGameMode>();
+
+	FVector LaunchVelocity =
+		(GM && GM->ShootingMode == EShootingMode::SuperMode)
+		? CalculatePerfectShotVelocity()
+		: CalculateLaunchVelocity();
+
 	if (LaunchVelocity.IsNearlyZero())
 	{
 		bIsCharging = false;
@@ -256,47 +407,30 @@ void UBallHandlerComponent::ShootBall()
 
 	ABasketBall* BallToShoot = CurrentBall;
 	if (!BallToShoot)
-	{
 		return;
-	}
 
-	// Detach ball from hand
-	BallToShoot->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	BallToShoot->DetachFromActor(
+		FDetachmentTransformRules::KeepWorldTransform);
+
 	BallToShoot->bIsHeld = false;
-
 	BallToShoot->EnablePhysics();
 	BallToShoot->BallMesh->SetPhysicsLinearVelocity(LaunchVelocity);
-
 	BallToShoot->MarkAsShot();
+
 	CurrentBall = nullptr;
-
-	//// 🔥 CRITICAL: Mark shot state
-	//BallToShoot->bWasShot = true;
-	//BallToShoot->BallMesh->SetGenerateOverlapEvents(true);
-	//BallToShoot->bHasScoredThisShot = false;
-
-	// Apply physics
-	BallToShoot->EnablePhysics();
-	BallToShoot->BallMesh->SetPhysicsLinearVelocity(LaunchVelocity);
 
 	UE_LOG(LogTemp, Warning,
 		TEXT("Shot ball | Charge=%.2f | Speed=%.0f"),
 		CurrentCharge,
 		LaunchVelocity.Size());
 
-	// Register attempt with authority
-	if (UWorld* World = GetWorld())
+	if (GM)
 	{
-		if (ABasketBallGameGameMode* GM = World->GetAuthGameMode<ABasketBallGameGameMode>())
-		{
-			GM->RegisterShotAttempt();
-		}
+		GM->RegisterShotAttempt();
 	}
 
-	// Reset charging
 	bIsCharging = false;
 	CurrentCharge = 0.0f;
-
 	ClearTrajectoryPreview();
 }
 
@@ -401,4 +535,17 @@ void UBallHandlerComponent::ClearTrajectoryPreview()
 {
 	CachedTrajectoryPoints.Empty();
 	// Debug lines with 0 lifetime auto-clear on next frame
+}
+
+void UBallHandlerComponent::TriggerDribbleVisual()
+{
+	if (!CachedCharacter || !CachedCharacter->DribbleVisualMesh)
+		return;
+
+	UStaticMeshComponent* Mesh = CachedCharacter->DribbleVisualMesh;
+
+	FVector Start = Mesh->GetRelativeLocation();
+	FVector Down = Start - FVector(0.f, 0.f, 50.f);
+
+	Mesh->SetRelativeLocation(Down);
 }

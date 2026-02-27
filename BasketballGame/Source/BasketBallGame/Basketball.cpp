@@ -85,7 +85,7 @@ void ABasketBall::MarkAsShot()
 		ShotTimerHandle,
 		this,
 		&ABasketBall::HandleShotTimeout,
-		2.0f,
+		ShotValidationTime,
 		false
 	);
 }

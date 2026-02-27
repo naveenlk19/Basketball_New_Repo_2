@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "BallHandlerComponent.h"
+#include "Net/UnrealNetwork.h"
+#include "Public/BasketballGlobalTypes.h"
 #include "BasketBallGameCharacter.generated.h"
 
 class USpringArmComponent;
@@ -60,16 +62,8 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* PickupBallAction;
 
-	// ======== HUD Widget System ========
-
-	///** Score HUD widget class to auto-create on BeginPlay */
-	//UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
-	//TSubclassOf<UUserWidget> ScoreHUDClass;
-
-	///** Created Score HUD widget instance */
-	//UPROPERTY(BlueprintReadOnly, Category = "UI")
-	//UUserWidget* ScoreHUDWidget;
-
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputAction* DribbleAction;
 	/** BeginPlay override for widget creation */
 	virtual void BeginPlay() override;
 
@@ -77,6 +71,22 @@ public:
 
 	/** Constructor */
 	ABasketBallGameCharacter();	
+	void SetPlayerActive(bool bActive);
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EPlayerType PlayerType = EPlayerType::Human;
+
+	//Dribble 
+	UPROPERTY(EditDefaultsOnly, Category = "Dribble Debug")
+	UMaterialInterface* TestMaterial;
+
+	UPROPERTY()
+	UStaticMeshComponent* DribbleVisualMesh;
+
+	UPROPERTY(Replicated)
+	int32 TeamID = 0;
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps
+	) const override;
 
 protected:
 
@@ -111,6 +121,11 @@ public:
 	/** Handles jump pressed inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
+
+	// Dribble
+	void StartDribble();	
+	void StopDribble();
+	void ToggleDribble();
 
 public:
 

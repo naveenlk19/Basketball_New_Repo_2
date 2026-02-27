@@ -5,6 +5,26 @@
 #include "CoreMinimal.h"
 #include "BasketballGlobalTypes.generated.h"
 
+
+// ===============================
+// PlayerType
+// ===============================
+UENUM(BlueprintType)
+enum class EPlayerType : uint8
+{
+	Human UMETA(DisplayName = "Human"),
+	AI    UMETA(DisplayName = "AI")
+};
+
+UENUM(BlueprintType)
+enum class EMatchPhase : uint8
+{
+	PreMatch     UMETA(DisplayName = "Pre Match"),
+	FirstHalf    UMETA(DisplayName = "First Half"),
+	Halftime     UMETA(DisplayName = "Halftime"),
+	SecondHalf   UMETA(DisplayName = "Second Half"),
+	GameOver     UMETA(DisplayName = "Game Over")
+};
 /*
 ============================================================
 GLOBAL GAMEPLAY SNAPSHOT STRUCT
@@ -53,15 +73,33 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	float Efficiency = 0.f;
 
-	// ===============================
-	// FUTURE EXPANSION (PHASE 2)
-	// ===============================
-
-	/*
 	UPROPERTY(BlueprintReadOnly)
-	int32 RemainingTime = 0;
+	int32 FinalScore = 0;
 
 	UPROPERTY(BlueprintReadOnly)
-	bool bMatchActive = false;
-	*/
+	int32 EarnedXP = 0;
+
+	UPROPERTY(BlueprintReadOnly)
+	EMatchPhase MatchPhase = EMatchPhase::PreMatch;
+
+	// ===============================
+	// MATCH TIMER
+	// ===============================
+
+	UPROPERTY(BlueprintReadOnly)
+	float TimeRemaining = 0.f;
+};
+
+UENUM(BlueprintType)
+enum class EGameModeStyle : uint8
+{
+	Arcade      UMETA(DisplayName = "Arcade"),
+	Realistic   UMETA(DisplayName = "Realistic")
+};
+
+UENUM(BlueprintType)
+enum class EShootingMode : uint8
+{
+	Normal      UMETA(DisplayName = "Normal"),
+	SuperMode   UMETA(DisplayName = "Super Mode")
 };

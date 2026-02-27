@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -12,7 +14,7 @@ class UBasketballMatchComponent;
  *
  * Authority layer.
  * - Owns MatchComponent
- * - Receives calls from Hoop/BallHandler
+ * - Receives calls from Hoop / BallHandler
  * - Exposes read-only access for UI
  */
 UCLASS()
@@ -38,17 +40,54 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Basketball|Scoring")
 	void RegisterShotMiss();
-	
+
+	// ========================
+	// Match System
+	// ========================
+
+	/** Start the match from PreMatch state. No-op if already started. */
+	void StartMatch();
+
+	/**
+	 * Restart the match from any phase back to PreMatch.
+	 * Resets all stats and clears active timers.
+	 * Called by PlayerController on behalf of the Restart button.
+	 */
+	void RestartMatch();
+
+	void ActivateAllPlayers(bool bActive);
+
+	// ===============================
+	// MATCH TIMER
+	// ===============================
+
+	FTimerHandle MatchTimerHandle;
+	FTimerHandle HalftimeTimerHandle;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Basketball|Match")
+	float HalftimePerformanceDuration = 10.f;
+
+	void HandleMatchTick();
+	void StartHalftime();
+	void StartSecondHalf();
+	void BroadcastSnapshot(const FBasketballGameSnapshot& Snapshot);
+
+	// ========================
+	// Team System
+	// ========================
+
+	int32 AssignTeamToPlayer(APlayerController* PC);
+
 	// ========================
 	// Snapshot System
 	// ========================
-	
+
 	/** Get complete gameplay snapshot (forwards from MatchComponent) */
 	UFUNCTION(BlueprintPure, Category = "Basketball|Snapshot")
 	FBasketballGameSnapshot GetGameSnapshot() const;
-	
+
 	void RefreshAllPlayerHUD();
-	
+
 	// ========================
 	// Read-Only Access (UI)
 	// ========================
@@ -58,6 +97,7 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "Basketball|Scoring")
 	int32 GetCurrentStreak() const;
+
 	UFUNCTION(BlueprintPure, Category = "Basketball|Scoring")
 	int32 GetBestStreak() const;
 
@@ -79,6 +119,12 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Basketball|Scoring")
 	UBasketballMatchComponent* GetMatchComponent() const;
 
+	//Dribble
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Mode")
+	EGameModeStyle GameModeStyle = EGameModeStyle::Arcade;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
+	EShootingMode ShootingMode = EShootingMode::Normal;
 private:
 
 	// Authority logic component

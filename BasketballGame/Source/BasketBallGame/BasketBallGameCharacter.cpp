@@ -14,6 +14,8 @@
 #include "BasketBallGame.h"
 #include "Blueprint/UserWidget.h"
 #include "GameFramework/PlayerController.h"
+#include "BasketBallGameGameMode.h"
+
 
 ABasketBallGameCharacter::ABasketBallGameCharacter()
 {
@@ -55,12 +57,34 @@ ABasketBallGameCharacter::ABasketBallGameCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
-
-	//// HUD Widget defaults
-	//ScoreHUDClass = nullptr;
-	//ScoreHUDWidget = nullptr;
+	DribbleVisualMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DribbleVisualMesh"));
+	DribbleVisualMesh->SetupAttachment(GetMesh(), TEXT("hand_r_ball"));
+	DribbleVisualMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DribbleVisualMesh->SetVisibility(false);
+	DribbleVisualMesh->SetHiddenInGame(true);
+	
 }
 
+void ABasketBallGameCharacter::SetPlayerActive(bool bActive)
+{
+	if (APlayerController* PC = Cast<APlayerController>(GetController()))
+	{
+		if (bActive)
+		{
+			EnableInput(PC);
+		}
+		else
+		{
+			DisableInput(PC);
+		}
+	}
+}
+void ABasketBallGameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ABasketBallGameCharacter, TeamID);
+}
 void ABasketBallGameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -102,11 +126,42 @@ void ABasketBallGameCharacter::SetupPlayerInputComponent(UInputComponent* Player
 		{
 			EnhancedInputComponent->BindAction(PickupBallAction, ETriggerEvent::Started, this, &ABasketBallGameCharacter::PickupBall);
 		}
+
+		ABasketBallGameGameMode* GM =
+			GetWorld()->GetAuthGameMode<ABasketBallGameGameMode>();
+
+		if (GM && GM->GameModeStyle == EGameModeStyle::Realistic)
+		{
+			// HOLD behavior
+			EnhancedInputComponent->BindAction(
+				DribbleAction,
+				ETriggerEvent::Started,
+				this,
+				&ABasketBallGameCharacter::StartDribble);
+
+			EnhancedInputComponent->BindAction(
+				DribbleAction,
+				ETriggerEvent::Completed,
+				this,
+				&ABasketBallGameCharacter::StopDribble);
+		}
+		else
+		{
+			// TOGGLE behavior (Arcade)
+			EnhancedInputComponent->BindAction(
+				DribbleAction,
+				ETriggerEvent::Started,
+				this,
+				&ABasketBallGameCharacter::ToggleDribble);
+		}
+		
 	}
 	else
 	{
 		UE_LOG(LogBasketBallGame, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+
+
 }
 
 void ABasketBallGameCharacter::Move(const FInputActionValue& Value)
@@ -178,4 +233,26 @@ void ABasketBallGameCharacter::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();
+}
+
+	// Dribble
+void ABasketBallGameCharacter::StartDribble()
+{
+	if (BallHandler)
+		BallHandler->SetWantsToDribble(true);
+}
+
+void ABasketBallGameCharacter::StopDribble()
+{
+	if (BallHandler)
+		BallHandler->SetWantsToDribble(false);
+}
+
+void ABasketBallGameCharacter::ToggleDribble()
+{
+	if (!BallHandler)
+		return;
+
+	const bool bNewState = !BallHandler->IsDribbling();
+	BallHandler->SetWantsToDribble(bNewState);
 }
