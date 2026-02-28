@@ -79,7 +79,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Dribble Debug")
 	UMaterialInterface* TestMaterial;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dribble", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* DribbleVisualMesh;
 
 	UPROPERTY(Replicated)

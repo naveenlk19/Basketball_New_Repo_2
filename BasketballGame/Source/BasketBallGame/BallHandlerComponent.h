@@ -119,6 +119,7 @@ public:
 	void SetWantsToDribble(bool bNewValue);
 	bool IsDribbling() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Dribble")
 	void TriggerDribbleVisual();
 
 	UPROPERTY()
