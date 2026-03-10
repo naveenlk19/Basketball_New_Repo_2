@@ -550,11 +550,11 @@ void UBallHandlerComponent::TriggerDribbleVisual()
 	UStaticMeshComponent* Mesh = CachedCharacter->DribbleVisualMesh;
 	if (!Mesh) return;
 
-	// Always start from original base position
-	FVector DownLocation = InitialBallRelativeLocation;
-	DownLocation.Z -= 60.f;
+	UArrowComponent* Target = CachedCharacter->ActiveDribbleGroundTarget;
+	if (!Target) return;
 
-	Mesh->SetRelativeLocation(DownLocation);
+	BounceStartLocation = Mesh->GetComponentLocation();
+	BounceTargetLocation = Target->GetComponentLocation();
 
 	// Snap back to exact base
 	FTimerHandle TimerHandle;

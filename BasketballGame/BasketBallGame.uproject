@@ -31,10 +31,7 @@
 			"Name": "GameplayStateTree",
 			"Enabled": true
 		},
-		{
-			"Name": "Aura",
-			"Enabled": false
-		},
+		
 		{
 			"Name": "ZoneGraph",
 			"Enabled": true

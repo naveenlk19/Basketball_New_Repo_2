@@ -116,6 +116,15 @@ public:
 
 	float DribbleTime = 0.f;
 
+	bool bDribbleBounceActive = false;
+
+	float BounceAlpha = 0.f;
+
+	float BounceDuration = 0.12f;
+
+	FVector BounceStartLocation;
+	FVector BounceTargetLocation;
+
 	void SetWantsToDribble(bool bNewValue);
 	bool IsDribbling() const;
 
