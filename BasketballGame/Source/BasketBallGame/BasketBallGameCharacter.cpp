@@ -62,7 +62,22 @@ ABasketBallGameCharacter::ABasketBallGameCharacter()
 	DribbleVisualMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	DribbleVisualMesh->SetVisibility(false);
 	DribbleVisualMesh->SetHiddenInGame(true);
+
+	LeftHandDribbleTarget = CreateDefaultSubobject<UArrowComponent>(TEXT("LeftHandDribbleTarget"));
+	LeftHandDribbleTarget->SetupAttachment(RootComponent);
+	LeftHandDribbleTarget->SetRelativeLocation(FVector(30.f, -25.f, -90.f));
+
+	RightHandDribbleTarget = CreateDefaultSubobject<UArrowComponent>(TEXT("RightHandDribbleTarget"));
+	RightHandDribbleTarget->SetupAttachment(RootComponent);
+	RightHandDribbleTarget->SetRelativeLocation(FVector(30.f, 25.f, -90.f));
+
+	// Default dribble side
+	ActiveDribbleGroundTarget = RightHandDribbleTarget;
 	
+}
+void ABasketBallGameCharacter::SetDribbleHand(bool bUseRightHand)
+{
+	ActiveDribbleGroundTarget = bUseRightHand ? RightHandDribbleTarget : LeftHandDribbleTarget;
 }
 
 void ABasketBallGameCharacter::SetPlayerActive(bool bActive)

@@ -8,6 +8,7 @@
 #include "BallHandlerComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Public/BasketballGlobalTypes.h"
+#include "Components/ArrowComponent.h"
 #include "BasketBallGameCharacter.generated.h"
 
 class USpringArmComponent;
@@ -82,6 +83,15 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dribble", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* DribbleVisualMesh;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dribble")
+	UArrowComponent* LeftHandDribbleTarget;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dribble")
+	UArrowComponent* RightHandDribbleTarget;
+
+	// Active target used during dribble
+	UArrowComponent* ActiveDribbleGroundTarget;
+
 	UPROPERTY(Replicated)
 	int32 TeamID = 0;
 
@@ -126,7 +136,7 @@ public:
 	void StartDribble();	
 	void StopDribble();
 	void ToggleDribble();
-
+	void SetDribbleHand(bool bUseRightHand);
 public:
 
 	/** Returns CameraBoom subobject **/
