@@ -567,30 +567,31 @@ void UBallHandlerComponent::TriggerDribbleVisual()
 		0.08f,
 		false
 	);
-}void UBallHandlerComponent::TriggerDribbleVisual()
-{
-	if (!CachedCharacter) return;
-
-	UStaticMeshComponent* Mesh = CachedCharacter->DribbleVisualMesh;
-	if (!Mesh) return;
-
-	// Always reset to clean base first
-	Mesh->SetRelativeLocation(InitialBallRelativeLocation);
-
-	FVector BounceLocation = InitialBallRelativeLocation;
-	BounceLocation.Z -= 60.f;
-
-	Mesh->SetRelativeLocation(BounceLocation);
-
-	FTimerHandle TimerHandle;
-
-	CachedCharacter->GetWorldTimerManager().SetTimer(
-		TimerHandle,
-		[this, Mesh]()
-		{
-			Mesh->SetRelativeLocation(InitialBallRelativeLocation);
-		},
-		0.08f,
-		false
-	);
 }
+//void UBallHandlerComponent::TriggerDribbleVisual()
+//{
+//	if (!CachedCharacter) return;
+//
+//	UStaticMeshComponent* Mesh = CachedCharacter->DribbleVisualMesh;
+//	if (!Mesh) return;
+//
+//	// Always reset to clean base first
+//	Mesh->SetRelativeLocation(InitialBallRelativeLocation);
+//
+//	FVector BounceLocation = InitialBallRelativeLocation;
+//	BounceLocation.Z -= 60.f;
+//
+//	Mesh->SetRelativeLocation(BounceLocation);
+//
+//	FTimerHandle TimerHandle;
+//
+//	CachedCharacter->GetWorldTimerManager().SetTimer(
+//		TimerHandle,
+//		[this, Mesh]()
+//		{
+//			Mesh->SetRelativeLocation(InitialBallRelativeLocation);
+//		},
+//		0.08f,
+//		false
+//	);
+//}

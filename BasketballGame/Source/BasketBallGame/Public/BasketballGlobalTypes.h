@@ -20,6 +20,7 @@ UENUM(BlueprintType)
 enum class EMatchPhase : uint8
 {
 	PreMatch     UMETA(DisplayName = "Pre Match"),
+	TipOff       UMETA(DisplayName = "Tip-Off"),
 	FirstHalf    UMETA(DisplayName = "First Half"),
 	Halftime     UMETA(DisplayName = "Halftime"),
 	SecondHalf   UMETA(DisplayName = "Second Half"),
