@@ -1,4 +1,5 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -7,12 +8,14 @@
 
 class ABasketBallHoop;
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnScoreChanged, int32, NewScore, int32, Streak, int32, BestStreak);
+/** Delegate for score changes */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnScoreChanged, int32, NewScore, int32, TotalMakes, int32, TotalAttempts);
 
+/** Delegate for timer updates */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTimerUpdated, float, RemainingTime);
 
+/** Delegate for game state changes */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameStarted);
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnGameEnded, int32, FinalScore);
 
 /**

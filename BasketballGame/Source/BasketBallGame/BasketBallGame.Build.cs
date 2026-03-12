@@ -18,8 +18,7 @@ public class BasketBallGame : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate",
-				"GameplayTasks",
+			"Slate"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
@@ -38,9 +37,7 @@ public class BasketBallGame : ModuleRules
 			"BasketBallGame/Variant_SideScrolling/AI",
 			"BasketBallGame/Variant_SideScrolling/Gameplay",
 			"BasketBallGame/Variant_SideScrolling/Interfaces",
-			"BasketBallGame/Variant_SideScrolling/UI",
-				"BasketBallGame/Basketball",
-				"BasketBallGame/Basketball/AI",
+			"BasketBallGame/Variant_SideScrolling/UI"
 		});
 
 		// Uncomment if you are using Slate UI

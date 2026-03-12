@@ -4,29 +4,10 @@
 #include "BasketballMatchComponent.h"
 #include "BasketBAllGamePlayerController.h"
 #include "BasketBAllGameCharacter.h"
-#include "BasketballCommentarySubsystem.h"
 
 ABasketBallGameGameMode::ABasketBallGameGameMode()
 {
 	MatchComponent = CreateDefaultSubobject<UBasketballMatchComponent>(TEXT("MatchComponent"));
-}
-
-// ========================
-// Commentary Helper
-// ========================
-
-/** Retrieves the Commentary Subsystem safely. Returns nullptr if unavailable. */
-static UBasketballCommentarySubsystem* GetCommentary(const UObject* Context)
-{
-	if (!Context) return nullptr;
-	if (UWorld* World = Context->GetWorld())
-	{
-		if (UGameInstance* GI = World->GetGameInstance())
-		{
-			return GI->GetSubsystem<UBasketballCommentarySubsystem>();
-		}
-	}
-	return nullptr;
 }
 
 void ABasketBallGameGameMode::BeginPlay()
@@ -58,18 +39,6 @@ void ABasketBallGameGameMode::RegisterShotSuccess(int32 PointValue)
 	MatchComponent->RegisterShotSuccess(PointValue);
 	RefreshAllPlayerHUD();
 	UE_LOG(LogTemp, Warning, TEXT("GameMode: Shot Success | Points: %d"), PointValue);
-
-	// Commentary: shot made + streak notification.
-	if (UBasketballCommentarySubsystem* Commentary = GetCommentary(this))
-	{
-		Commentary->OnShotMade();
-
-		const int32 Streak = MatchComponent->GetCurrentStreak();
-		if (Streak >= 2)
-		{
-			Commentary->OnStreakStarted(Streak);
-		}
-	}
 }
 
 void ABasketBallGameGameMode::RegisterShotMiss()
@@ -78,12 +47,6 @@ void ABasketBallGameGameMode::RegisterShotMiss()
 	MatchComponent->RegisterShotMiss();
 	RefreshAllPlayerHUD();
 	UE_LOG(LogTemp, Warning, TEXT("GameMode: Shot Miss"));
-
-	// Commentary: shot missed.
-	if (UBasketballCommentarySubsystem* Commentary = GetCommentary(this))
-	{
-		Commentary->OnShotMissed();
-	}
 }
 
 // ========================
@@ -111,12 +74,6 @@ void ABasketBallGameGameMode::StartMatch()
 	);
 
 	BroadcastSnapshot(MatchComponent->GetGameSnapshot());
-
-	// Notify commentary system that a new game has started.
-	if (UBasketballCommentarySubsystem* Commentary = GetCommentary(this))
-	{
-		Commentary->OnGameStart();
-	}
 }
 
 void ABasketBallGameGameMode::RestartMatch()
@@ -182,13 +139,8 @@ void ABasketBallGameGameMode::HandleMatchTick()
 		}
 		else if (MatchComponent->GetMatchPhase() == EMatchPhase::SecondHalf)
 		{
-			MatchComponent->SetMatchPhase(EMatchPhase::GameOver);
-
-			// Commentary: game has ended.
-			if (UBasketballCommentarySubsystem* Commentary = GetCommentary(this))
-			{
-				Commentary->OnGameEnd();
-			}
+			MatchComponent->SetMatchPhase(EMatchPhase::GameOver); 
+			//BroadcastSnapshot(MatchComponent->GetGameSnapshot());
 		}
 
 		BroadcastSnapshot(MatchComponent->GetGameSnapshot());
