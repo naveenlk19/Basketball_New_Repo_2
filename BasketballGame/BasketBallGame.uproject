@@ -59,6 +59,10 @@
 		{
 			"Name": "LudusAI",
 			"Enabled": true
+		},
+		{
+			"Name": "UnrealMCPython",
+			"Enabled": true
 		}
 	]
 }
